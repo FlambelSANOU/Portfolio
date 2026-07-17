@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flambel SANOU | Ingénieur Logiciel & Intégrateur IA</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Tailwind Config for Futuristic Theme (Strictly NO Gradients) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: {
+                            bg: '#08090c',
+                            card: '#0f111a',
+                            border: '#1f2937',
+                            accent: '#00f0ff', /* Solid Neon Cyan */
+                            danger: '#ff0055', /* Solid Cyber Pink */
+                            text: '#f3f4f6',
+                            muted: '#9ca3af'
+                        }
+                    },
+                    fontFamily: {
+                        mono: ['Courier New', 'Courier', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #08090c;
+            color: #f3f4f6;
+            overflow-x: hidden;
+        }
+        /* Custom dynamic cyber border */
+        .cyber-panel {
+            position: relative;
+            border: 1px solid #1f2937;
+            background-color: #0f111a;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        .cyber-panel:hover {
+            border-color: #00f0ff;
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.15);
+            transform: translateY(-2px);
+        }
+        /* Dynamic scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #08090c;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #00f0ff;
+            border-radius: 0px;
+        }
+        /* Scanline Overlay for Cyberpunk Vibe */
+        .scanlines {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+            background-size: 100% 4px;
+            z-index: 999;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body class="font-mono selection:bg-cyber-accent selection:text-black">
+
+    <div class="scanlines"></div>
+
+    <!-- Background Particle Canvas -->
+    <canvas id="particleCanvas" class="fixed inset-0 pointer-events-none z-0 opacity-40"></canvas>
+
+    <!-- HEADER & NAVBAR -->
+    <header class="sticky top-0 z-50 bg-cyber-bg/90 backdrop-blur-md border-b border-cyber-border">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-3 group">
+                <!-- LOGO PLACEHOLDER -->
+                <div class="w-10 h-10 border border-cyber-accent flex items-center justify-center bg-cyber-card">
+                    <span class="text-cyber-accent font-bold text-lg group-hover:scale-110 transition-transform">FS</span>
+                </div>
+                <span class="text-white font-bold tracking-widest text-sm hidden sm:block">Flambel SANOU</span>
+            </a>
+            <nav class="hidden md:flex gap-8 text-sm">
+                <a href="#about" class="text-cyber-muted hover:text-cyber-accent transition-colors">01. PROFIL</a>
+                <a href="#experience" class="text-cyber-muted hover:text-cyber-accent transition-colors">02. EXPÉRIENCE</a>
+                <a href="#projects" class="text-cyber-muted hover:text-cyber-accent transition-colors">03. PROJETS</a>
+                <a href="#skills" class="text-cyber-muted hover:text-cyber-accent transition-colors">04. SKILLS</a>
+            </nav>
+            <a href="#contact" class="px-4 py-2 border border-cyber-accent text-cyber-accent text-xs font-bold uppercase tracking-wider hover:bg-cyber-accent hover:text-black transition-all">
+                Contact_
+            </a>
+        </div>
+    </header>
+
+    <main class="relative z-10 max-w-7xl mx-auto px-6">
+
+        <!-- HERO SECTION -->
+        <section id="about" class="min-h-[85vh] flex flex-col justify-center py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-block px-3 py-1 border border-cyber-accent/30 text-cyber-accent text-xs uppercase tracking-widest">
+                        Co-Founder & CEO Yaba-In | Google Cloud Certified - Gen AI Leader
+                    </div>
+                    <h1 class="text-4xl sm:text-6xl font-black text-white leading-tight">
+                        Flambel Junior<br>
+                        <span class="text-cyber-accent">SANOU KUÉ</span>
+                    </h1>
+                    <h2 class="text-xl sm:text-2xl text-cyber-muted font-light">
+                        Software engineer | Tech lecturer | Corporate AI integrator
+                    </h2>
+                    <!-- Terminal Window effect -->
+                    <div class="bg-cyber-card border border-cyber-border p-4 rounded-none font-mono text-xs text-cyber-muted space-y-2">
+                        <div class="flex items-center justify-between border-b border-cyber-border pb-2 mb-2">
+                            <span class="text-cyber-accent"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i> contact@yaba-in.com</span>
+                            <div class="flex gap-1.5">
+                                <span class="w-2.5 h-2.5 rounded-full bg-cyber-border inline-block"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-cyber-border inline-block"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-cyber-accent inline-block"></span>
+                            </div>
+                        </div>
+                        <p><span class="text-cyber-danger">> </span><strong>Expertise :</strong>Project Management, UI/UX Design & Fullstack Dev, ERP Integration, Trainer.</p>
+                        <p id="typingEffect"><span class="text-cyber-danger">> </span><span class="text-white"></span></p>
+                    </div>
+                    <div class="flex gap-4 pt-4">
+                        <a href="#projects" class="px-6 py-3 bg-cyber-accent text-black font-bold text-sm uppercase tracking-wider hover:bg-white transition-all">
+                            Voir les projets
+                        </a>
+                        <a href="https://github.com/FlambelSANOU" target="_blank" class="px-6 py-3 border border-cyber-border text-white font-bold text-sm uppercase tracking-wider hover:border-cyber-accent hover:text-cyber-accent transition-all flex items-center gap-2">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 flex justify-center relative">
+                    <!-- Photo placeholder styling like a military hologram -->
+                    <div class="w-85 h-92 border-2 border-cyber-accent p-2 relative">
+                        <div class="absolute -top-3 -left-3 w-6 h-6 border-t-2 border-l-2 border-cyber-accent"></div>
+                        <div class="absolute -bottom-3 -right-3 w-6 h-6 border-b-2 border-r-2 border-cyber-accent"></div>
+                        <img src="./assets/img/flambel.png" alt="Flambel SANOU" class="w-full h-full object-cover filter grayscale sepia-0 brightness-90 contrast-110">
+                        <div class="absolute bottom-4 left-4 bg-black/90 px-3 py-1 border border-cyber-danger text-cyber-danger text-xs">
+                            Location: Cameroon - Kenya
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCES SECTION (Truncated List) -->
+        <section id="experience" class="py-20 border-t border-cyber-border">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <span class="text-cyber-accent text-xs font-bold tracking-widest block uppercase">// 02. Parours</span>
+                    <h2 class="text-3xl font-bold text-white">Expériences Professionnelles</h2>
+                </div>
+            </div>
+
+            <!-- Experience List container -->
+            <div id="experienceList" class="space-y-6">
+                
+                <!-- Exp 1 (Visible) -->
+                <div class="cyber-panel p-6 grid grid-cols-1 md:grid-cols-4 gap-6 items-start">
+                    <div class="md:col-span-1 flex flex-col gap-2">
+                        <span class="text-cyber-accent font-bold text-sm">Jan 2018 - Présent</span>
+                        <img src="https://placehold.co/120x40/121520/00f0ff?text=Yaba-In" alt="Yaba-In" class="h-10 w-28 object-contain bg-cyber-bg p-1 border border-cyber-border">
+                    </div>
+                    <div class="md:col-span-3 space-y-2">
+                        <h3 class="text-xl font-bold text-white">CEO, UI/UX Designer, Développeur Web/Mobile</h3>
+                        <p class="text-cyber-danger text-sm">Yaba-In <span class="text-cyber-muted">| Cameroun</span></p>
+                        <p class="text-cyber-muted text-sm leading-relaxed">Administration de l'entreprise, développement d'applications web et mobiles, design graphique, intégration de solutions logicielles, déploiements Odoo et AR/VR.</p>
+                    </div>
+                </div>
+
+                <!-- Exp 2 (Visible) -->
+                <div class="cyber-panel p-6 grid grid-cols-1 md:grid-cols-4 gap-6 items-start">
+                    <div class="md:col-span-1 flex flex-col gap-2">
+                        <span class="text-cyber-accent font-bold text-sm">Jan 2023 - Présent</span>
+                        <img src="https://placehold.co/120x40/121520/00f0ff?text=UdM" alt="UdM" class="h-10 w-28 object-contain bg-cyber-bg p-1 border border-cyber-border">
+                    </div>
+                    <div class="md:col-span-3 space-y-2">
+                        <h3 class="text-xl font-bold text-white">Enseignant UI/UX Design et Interface Homme-Machine</h3>
+                        <p class="text-cyber-danger text-sm">Université des Montagnes <span class="text-cyber-muted">| Cameroun</span></p>
+                        <p class="text-cyber-muted text-sm leading-relaxed">Introduction à l'infographie et design graphique. Accompagnement dans l'acquisition des compétences sur le Design Sprint et la conception d'interfaces optimisant l'expérience utilisateur (IHM).</p>
+                    </div>
+                </div>
+
+                <!-- Exp 3 (Visible) -->
+                <div class="cyber-panel p-6 grid grid-cols-1 md:grid-cols-4 gap-6 items-start">
+                    <div class="md:col-span-1 flex flex-col gap-2">
+                        <span class="text-cyber-accent font-bold text-sm">Jan 2023 - Présent</span>
+                        <img src="https://placehold.co/120x40/121520/00f0ff?text=GIC+Promote" alt="GIC Promote" class="h-10 w-28 object-contain bg-cyber-bg p-1 border border-cyber-border">
+                    </div>
+                    <div class="md:col-span-3 space-y-2">
+                        <h3 class="text-xl font-bold text-white">Consultant Technique - Formateur</h3>
+                        <p class="text-cyber-danger text-sm">GIC Promote LTD <span class="text-cyber-muted">| Nigéria - Cameroun</span></p>
+                        <p class="text-cyber-muted text-sm leading-relaxed">Support technique dans l'intégration de solutions logicielles à l'international. Conception d'identités visuelles (Google Workspace, Odoo, Magento). Formateur en technologies innovantes.</p>
+                    </div>
+                </div>
+
+                <!-- HIDDEN EXPERIENCES (Collapsible list) -->
+                <div id="extraExperiences" class="hidden space-y-6">
+                    <!-- Exp 4 -->
+                    <div class="cyber-panel p-6 grid grid-cols-1 md:grid-cols-4 gap-6 items-start">
+                        <div class="md:col-span-1 flex flex-col gap-2">
+                            <span class="text-cyber-accent font-bold text-sm">Juil 2023 - Juil 2024</span>
+                            <img src="https://placehold.co/120x40/121520/00f0ff?text=MASPEL" alt="MASPEL" class="h-10 w-28 object-contain bg-cyber-bg p-1 border border-cyber-border">
+                        </div>
+                        <div class="md:col-span-3 space-y-2">
+                            <h3 class="text-xl font-bold text-white">Assistant Coordonnateur Technique</h3>
+                            <p class="text-cyber-danger text-sm">MASPEL-UdM <span class="text-cyber-muted">| Cameroun</span></p>
+                            <p class="text-cyber-muted text-sm leading-relaxed">Conception de solutions logicielles de gestion de l'apprentissage en ligne de haute performance. Protocoles d'utilisation et sauvegardes de sécurité.</p>
+                        </div>
+                    </div>
+
+                    <!-- Exp 5 -->
+                    <div class="cyber-panel p-6 grid grid-cols-1 md:grid-cols-4 gap-6 items-start">
+                        <div class="md:col-span-1 flex flex-col gap-2">
+                            <span class="text-cyber-accent font-bold text-sm">Jan 2023 - Présent</span>
+                            <img src="https://placehold.co/120x40/121520/00f0ff?text=Clemios" alt="Clemios" class="h-10 w-28 object-contain bg-cyber-bg p-1 border border-cyber-border">
+                        </div>
+                        <div class="md:col-span-3 space-y-2">
+                            <h3 class="text-xl font-bold text-white">Consultant - Développeur Web / Mobile</h3>
+                            <p class="text-cyber-danger text-sm">Clemios <span class="text-cyber-muted">| Allemagne - Cameroun</span></p>
+                            <p class="text-cyber-muted text-sm leading-relaxed">Élaboration d'identités graphiques et optimisation de l'UX d'applications multi-plateformes de la conception aux tests d'interfaces.</p>
+                        </div>
+                    </div>
+
+                    <!-- Exp 6 -->
+                    <div class="cyber-panel p-6 grid grid-cols-1 md:grid-cols-4 gap-6 items-start">
+                        <div class="md:col-span-1 flex flex-col gap-2">
+                            <span class="text-cyber-accent font-bold text-sm">Jan 2022 - Présent</span>
+                            <img src="https://placehold.co/120x40/121520/00f0ff?text=Tonkain" alt="Tonkain" class="h-10 w-28 object-contain bg-cyber-bg p-1 border border-cyber-border">
+                        </div>
+                        <div class="md:col-span-3 space-y-2">
+                            <h3 class="text-xl font-bold text-white">Consultant - Développeur Web / Mobile</h3>
+                            <p class="text-cyber-danger text-sm">Tonkain <span class="text-cyber-muted">| Cameroun</span></p>
+                            <p class="text-cyber-muted text-sm leading-relaxed">Support UX/UI aux équipes de développement globales et implémentation de meilleures pratiques de conception esthétique et fonctionnelle.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Voir Plus Button -->
+            <div class="flex justify-center mt-8">
+                <button id="toggleExpBtn" onclick="toggleSection('extraExperiences', 'toggleExpBtn', 'Expériences')" class="px-6 py-3 border border-cyber-accent text-cyber-accent text-xs uppercase tracking-widest font-bold hover:bg-cyber-accent hover:text-black transition-all">
+                    Voir d'avantage_
+                </button>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO PROJECTS SECTION -->
+        <section id="projects" class="py-20 border-t border-cyber-border">
+            <div class="mb-12">
+                <span class="text-cyber-accent text-xs font-bold tracking-widest block uppercase">// 03. Réalisations</span>
+                <h2 class="text-3xl font-bold text-white">Quelques Projets Clés</h2>
+            </div>
+
+            <!-- Project Grid -->
+            <div id="projectGrid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Projet 1 (Visible) -->
+                <div class="cyber-panel flex flex-col h-full">
+                    <div class="relative overflow-hidden group aspect-video bg-black">
+                        <img src="https://placehold.co/600x350/121520/00f0ff?text=Do+U+Have" alt="Do U Have" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <a href="https://douhave.co/" target="_blank" class="px-4 py-2 border border-cyber-accent text-cyber-accent text-xs font-bold uppercase tracking-wider bg-black hover:bg-cyber-accent hover:text-black transition-all">Visiter le site</a>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col justify-between flex-grow">
+                        <div class="space-y-2">
+                            <h3 class="text-xl font-bold text-white">Do U Have (DUH)</h3>
+                            <p class="text-cyber-accent text-xs">E-Commerce inversé disruptif</p>
+                            <p class="text-cyber-muted text-sm line-clamp-3">Une plateforme de commerce électronique révolutionnaire où l'acheteur publie une annonce décrivant l'article recherché, inversant le paradigme traditionnel.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 2 (Visible) -->
+                <div class="cyber-panel flex flex-col h-full">
+                    <div class="relative overflow-hidden group aspect-video bg-black">
+                        <img src="https://placehold.co/600x350/121520/00f0ff?text=Centre+Pasteur" alt="Centre Pasteur" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <a href="https://centre-pasteur.yaba-in.com" target="_blank" class="px-4 py-2 border border-cyber-accent text-cyber-accent text-xs font-bold uppercase tracking-wider bg-black hover:bg-cyber-accent hover:text-black transition-all">Visiter le site</a>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col justify-between flex-grow">
+                        <div class="space-y-2">
+                            <h3 class="text-xl font-bold text-white">Centre Pasteur du Cameroun</h3>
+                            <p class="text-cyber-accent text-xs">Site vitrine & Portail d'information</p>
+                            <p class="text-cyber-muted text-sm line-clamp-3">Conception du site d'un organisme technique du Ministère de la Santé, assurant accessibilité optimisée et navigation claire.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 3 (Visible) -->
+                <div class="cyber-panel flex flex-col h-full">
+                    <div class="relative overflow-hidden group aspect-video bg-black">
+                        <img src="https://placehold.co/600x350/121520/00f0ff?text=Yabi+Events" alt="Yabi Events" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <a href="https://yabi.cm" target="_blank" class="px-4 py-2 border border-cyber-accent text-cyber-accent text-xs font-bold uppercase tracking-wider bg-black hover:bg-cyber-accent hover:text-black transition-all">Visiter le site</a>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col justify-between flex-grow">
+                        <div class="space-y-2">
+                            <h3 class="text-xl font-bold text-white">Yabi Events (Yallur)</h3>
+                            <p class="text-cyber-accent text-xs">Plateforme Événementielle Bilingue</p>
+                            <p class="text-cyber-muted text-sm line-clamp-3">Solution dédiée à la promotion de la culture africaine avec suivi et gestion d'événements physiques et virtuels.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 4 (Visible) -->
+                <div class="cyber-panel flex flex-col h-full">
+                    <div class="relative overflow-hidden group aspect-video bg-black">
+                        <img src="https://placehold.co/600x350/121520/00f0ff?text=ySchool" alt="ySchool" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <a href="https://yschool.yaba-in.com" target="_blank" class="px-4 py-2 border border-cyber-accent text-cyber-accent text-xs font-bold uppercase tracking-wider bg-black hover:bg-cyber-accent hover:text-black transition-all">Visiter le site</a>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col justify-between flex-grow">
+                        <div class="space-y-2">
+                            <h3 class="text-xl font-bold text-white">ySchool</h3>
+                            <p class="text-cyber-accent text-xs">Système de gestion scolaire localisé</p>
+                            <p class="text-cyber-muted text-sm line-clamp-3">Gestion globale (administrative, financière, académique) taillée spécifiquement pour le contexte d'apprentissage africain.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HIDDEN PROJECTS (Collapsible list) -->
+                <div id="extraProjects" class="hidden md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
+                    <!-- Project 5 -->
+                    <div class="cyber-panel flex flex-col h-full">
+                        <div class="relative overflow-hidden group aspect-video bg-black">
+                            <img src="https://placehold.co/600x350/121520/00f0ff?text=CDB" alt="CDB" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6 flex flex-col justify-between flex-grow">
+                            <div class="space-y-2">
+                                <h3 class="text-xl font-bold text-white">Clinique Dentaire de Bonapriso</h3>
+                                <p class="text-cyber-accent text-xs">Site vitrine & Système de rendez-vous</p>
+                                <p class="text-cyber-muted text-sm line-clamp-3">Intégration d'un module interactif pour la prise de rendez-vous et mise en valeur des spécialités.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="cyber-panel flex flex-col h-full">
+                        <div class="relative overflow-hidden group aspect-video bg-black">
+                            <img src="https://placehold.co/600x350/121520/00f0ff?text=MICEI" alt="MICEI" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6 flex flex-col justify-between flex-grow">
+                            <div class="space-y-2">
+                                <h3 class="text-xl font-bold text-white">MICEI</h3>
+                                <p class="text-cyber-accent text-xs">Web de l'Africa Eye Foundation</p>
+                                <p class="text-cyber-muted text-sm line-clamp-3">Portail de l'ONG oculaire de Genève pour le Magrabi ICO Cameroon Eye Institute.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Voir Plus de Projets Button -->
+            <div class="flex justify-center mt-12">
+                <button id="toggleProjBtn" onclick="toggleSectionGrid('extraProjects', 'toggleProjBtn', 'Projets')" class="px-6 py-3 border border-cyber-accent text-cyber-accent text-xs uppercase tracking-widest font-bold hover:bg-cyber-accent hover:text-black transition-all">
+                    Voir d'avantage_
+                </button>
+            </div>
+        </section>
+
+        <!-- SKILLS & COMPETENCES -->
+        <section id="skills" class="py-20 border-t border-cyber-border">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-4">
+                    <span class="text-cyber-accent text-xs font-bold tracking-widest block uppercase">// 04. Expertises</span>
+                    <h2 class="text-3xl font-bold text-white">Compétences Techniques</h2>
+                    <p class="text-cyber-muted mt-4 text-sm leading-relaxed">Un ensemble de compétences étayé par une solide expérience dans la conception d'interfaces, le déploiement d'architectures immersives (AR/VR) et le développement Full stack agile.</p>
+                </div>
+                
+                <div class="lg:col-span-8 space-y-8">
+                    <!-- Tech Stack Categories -->
+                    <div>
+                        <h3 class="text-xs text-cyber-danger font-bold uppercase tracking-widest mb-4">> Frameworks & Languages</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">Angular</span>
+                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">Ionic</span>
+                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">NodeJS</span>
+                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">ExpressJs</span>
+                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">NestJs</span>
+                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">PHP</span>
+                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">Python</span>
+                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">C# / C++</span>
+                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">TypeScript</span>
+                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">HTML5 / CSS3 / JS</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xs text-cyber-danger font-bold uppercase tracking-widest mb-4">> Immersive & Design (AR/VR / UI)</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">Unity 3D</span>
+                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">SteamVR</span>
+                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">Oculus SDK</span>
+                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">Adobe XD</span>
+                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">Photoshop</span>
+                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">Illustrator</span>
+                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">Windesign / Edraw</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xs text-cyber-danger font-bold uppercase tracking-widest mb-4">> DevOps & Platforms</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">AWS</span>
+                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">Firebase</span>
+                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">MongoDB</span>
+                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">Odoo ERP</span>
+                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">Moodle</span>
+                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">Google Workspace Deployment</span>
+                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">Cpanel Admin</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DISTINCTIONS & CERTIFICATIONS (Truncated List) -->
+        <section id="certifications" class="py-20 border-t border-cyber-border">
+            <div class="mb-12">
+                <span class="text-cyber-accent text-xs font-bold tracking-widest block uppercase">// 05. Titres</span>
+                <h2 class="text-3xl font-bold text-white">Certifications & Distinctions</h2>
+            </div>
+
+            <div id="certList" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Cert 1 (Visible) -->
+                <div class="cyber-panel p-6 space-y-3">
+                    <div class="flex justify-between items-start">
+                        <span class="text-xs text-cyber-accent">MICROSOFT (Oct 2024)</span>
+                        <span class="px-2 py-0.5 border border-cyber-danger text-cyber-danger text-[10px] uppercase">Certificat</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">IA Générative et son Application en Formation</h3>
+                    <p class="text-cyber-muted text-xs leading-relaxed">Compétences d'intégration de l'IA générative dans les environnements d'apprentissage, prompts avancés et éthique.</p>
+                </div>
+
+                <!-- Cert 2 (Visible) -->
+                <div class="cyber-panel p-6 space-y-3">
+                    <div class="flex justify-between items-start">
+                        <span class="text-xs text-cyber-accent">AUF (Déc 2023)</span>
+                        <span class="px-2 py-0.5 border border-cyber-danger text-cyber-danger text-[10px] uppercase">Attestation</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">Ingénierie Pédagogique : Formation des Formateurs</h3>
+                    <p class="text-cyber-muted text-xs leading-relaxed">Maîtrise de la scénarisation de cours, de la FOAD et de l'évaluation des apprentissages numériques.</p>
+                </div>
+
+                <!-- HIDDEN CERTIFICATIONS -->
+                <div id="extraCerts" class="hidden md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+                    <!-- Cert 3 -->
+                    <div class="cyber-panel p-6 space-y-3">
+                        <div class="flex justify-between items-start">
+                            <span class="text-xs text-cyber-accent">COURSERA (Mars 2023)</span>
+                            <span class="px-2 py-0.5 border border-cyber-danger text-cyber-danger text-[10px] uppercase">Certificat</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white">Concepteur Expérience Utilisateur (UX)</h3>
+                        <p class="text-cyber-muted text-xs leading-relaxed">Processus Design Sprint, prototypage d'interactions et tests utilisateur interactifs.</p>
+                    </div>
+
+                    <!-- Cert 4 -->
+                    <div class="cyber-panel p-6 space-y-3">
+                        <div class="flex justify-between items-start">
+                            <span class="text-xs text-cyber-accent">GOOGLE CLOUD (2023)</span>
+                            <span class="px-2 py-0.5 border border-cyber-danger text-cyber-danger text-[10px] uppercase">Médaille Bronze</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white">Expert IA Gemini @ Google Workspace</h3>
+                        <p class="text-cyber-muted text-xs leading-relaxed">Exploitation des capacités avancées d'IA pour améliorer l'analyse intelligente et l'automatisation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Voir plus Certifications Button -->
+            <div class="flex justify-center mt-8">
+                <button id="toggleCertBtn" onclick="toggleSectionGrid('extraCerts', 'toggleCertBtn', 'Certifications')" class="px-6 py-3 border border-cyber-accent text-cyber-accent text-xs uppercase tracking-widest font-bold hover:bg-cyber-accent hover:text-black transition-all">
+                    Voir d'avantage_
+                </button>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="py-20 border-t border-cyber-border">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-5 space-y-6">
+                    <div>
+                        <span class="text-cyber-accent text-xs font-bold tracking-widest block uppercase">// 06. Connexion</span>
+                        <h2 class="text-3xl font-bold text-white">Lançons un projet</h2>
+                    </div>
+                    <p class="text-cyber-muted text-sm leading-relaxed">
+                        Besoin d'un accompagnement en architecture de solutions logicielles, design d'interfaces UI/UX dynamiques ou de conseils en ingénierie pédagogique ? Connectez-vous à mon nœud réseau.
+                    </p>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-envelope text-cyber-accent"></i>
+                            <a href="mailto:contact@yaba-in.com" class="text-white hover:underline">contact@yaba-in.com</a>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-phone text-cyber-accent"></i>
+                            <span class="text-white">(+237) 694 949 617</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7">
+                    <!-- High-tech contact form -->
+                    <form action="#" method="POST" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-xs text-cyber-accent uppercase tracking-widest font-bold">Nom_</label>
+                                <input type="text" required class="w-full bg-cyber-card border border-cyber-border p-3 text-sm focus:outline-none focus:border-cyber-accent text-white">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-xs text-cyber-accent uppercase tracking-widest font-bold">Email_</label>
+                                <input type="email" required class="w-full bg-cyber-card border border-cyber-border p-3 text-sm focus:outline-none focus:border-cyber-accent text-white">
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs text-cyber-accent uppercase tracking-widest font-bold">Message_</label>
+                            <textarea rows="5" required class="w-full bg-cyber-card border border-cyber-border p-3 text-sm focus:outline-none focus:border-cyber-accent text-white"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 bg-cyber-accent text-black font-bold uppercase tracking-widest text-xs hover:bg-white transition-all">
+                            Transmettre_le_message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-cyber-border bg-black/60 py-8 relative z-10 text-center text-xs text-cyber-muted">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p>© 2026 Flambel Junior SANOU KUÉ. Déployé sur flambel-sanou.yaba-in.com</p>
+            <div class="flex gap-6">
+                <a href="https://github.com/FlambelSANOU" target="_blank" class="hover:text-cyber-accent"><i class="fab fa-github fa-lg"></i></a>
+                <a href="https://shorturl.at/OYAMN" target="_blank" class="hover:text-cyber-accent"><i class="fab fa-linkedin fa-lg"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FUTURISTIC JS LOGIC -->
+    <script>
+        // --- 1. Collapsible Lists Logic ("Voir d'avantage") ---
+        function toggleSection(sectionId, btnId, typeLabel) {
+            const extraContent = document.getElementById(sectionId);
+            const toggleBtn = document.getElementById(btnId);
+            
+            if (extraContent.classList.contains('hidden')) {
+                extraContent.classList.remove('hidden');
+                // Dynamically apply GSAP animation
+                gsap.fromTo(`#${sectionId} > div`, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, stagger: 0.1 });
+                toggleBtn.innerText = "Voir moins_";
+            } else {
+                extraContent.classList.add('hidden');
+                toggleBtn.innerText = "Voir d'avantage_";
+            }
+        }
+
+        // Subtly different for grid displays
+        function toggleSectionGrid(sectionId, btnId, typeLabel) {
+            const extraContent = document.getElementById(sectionId);
+            const toggleBtn = document.getElementById(btnId);
+            
+            if (extraContent.classList.contains('hidden')) {
+                extraContent.classList.remove('hidden');
+                extraContent.classList.add('grid');
+                gsap.fromTo(`#${sectionId} > div`, { opacity: 0, scale: 0.95 }, { opacity: 1, scale: 1, duration: 0.5, stagger: 0.1 });
+                toggleBtn.innerText = "Voir moins_";
+            } else {
+                extraContent.classList.remove('grid');
+                extraContent.classList.add('hidden');
+                toggleBtn.innerText = "Voir d'avantage_";
+            }
+        }
+
+        // --- 2. Interactive Typing Effect ---
+        const phrases = [
+            "Innovation is only valuable when it sustainably improves the lives of people and organisations.",
+            "I train decision-makers to leverage artificial intelligence to make better decisions.",
+            "I audit your business and identify AI agent automation opportunities.",
+            "I design robust architectures...",
+            "I integrate sovereign artificial intelligence into your business processes to improve performance, efficiency and decision-making.",
+            "Contact me now !"
+        ];
+        let phraseIdx = 0;
+        let charIdx = 0;
+        let currentPhrase = '';
+        const targetEl = document.querySelector("#typingEffect span:nth-child(2)");
+
+        function type() {
+            if (charIdx < phrases[phraseIdx].length) {
+                currentPhrase += phrases[phraseIdx].charAt(charIdx);
+                targetEl.textContent = currentPhrase;
+                charIdx++;
+                setTimeout(type, 60);
+            } else {
+                setTimeout(erase, 2500);
+            }
+        }
+
+        function erase() {
+            if (charIdx > 0) {
+                currentPhrase = currentPhrase.substring(0, currentPhrase.length - 1);
+                targetEl.textContent = currentPhrase;
+                charIdx--;
+                setTimeout(erase, 30);
+            } else {
+                phraseIdx = (phraseIdx + 1) % phrases.length;
+                setTimeout(type, 500);
+            }
+        }
+        document.addEventListener("DOMContentLoaded", () => setTimeout(type, 1000));
+
+        // --- 3. Interactive Canvas Particles Background ---
+        const canvas = document.getElementById("particleCanvas");
+        const ctx = canvas.getContext("2d");
+        let particles = [];
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 1.5 + 0.5;
+                this.speedX = Math.random() * 0.4 - 0.2;
+                this.speedY = Math.random() * 0.4 - 0.2;
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                if (this.x > canvas.width) this.x = 0;
+                if (this.x < 0) this.x = canvas.width;
+                if (this.y > canvas.height) this.y = 0;
+                if (this.y < 0) this.y = canvas.height;
+            }
+            draw() {
+                ctx.fillStyle = '#00f0ff';
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function initParticles() {
+            particles = [];
+            const particleCount = Math.min(80, window.innerWidth / 15);
+            for (let i = 0; i < particleCount; i++) {
+                particles.push(new Particle());
+            }
+        }
+        initParticles();
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            requestAnimationFrame(animateParticles);
+        }
+        animateParticles();
+
+        // --- 4. Smooth GSAP Reveals ---
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.from(".cyber-panel", {
+            scrollTrigger: {
+                trigger: "#experience",
+                start: "top 80%",
+            },
+            opacity: 0,
+            y: 30,
+            duration: 0.6,
+            stagger: 0.15
+        });
+    </script>
+</body>
+</html>
