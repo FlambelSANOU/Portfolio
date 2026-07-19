@@ -66,6 +66,18 @@
             background: #00f0ff;
             border-radius: 0px;
         }
+        /* Logo marquee scroll */
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .marquee-track {
+            animation: marquee 50s linear infinite;
+            width: fit-content;
+        }
+        .marquee-track:hover {
+            animation-play-state: paused;
+        }
         /* Scanline Overlay for Cyberpunk Vibe */
         .scanlines {
             position: fixed;
@@ -110,7 +122,7 @@
     <main class="relative z-10 max-w-7xl mx-auto px-6">
 
         <!-- HERO SECTION -->
-        <section id="about" class="min-h-[85vh] flex flex-col justify-center py-20">
+        <section id="about" class="min-h-[73vh] flex flex-col justify-center">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 <div class="lg:col-span-7 space-y-6">
                     <div class="inline-block px-3 py-1 border border-cyber-accent/30 text-cyber-accent text-xs uppercase tracking-widest">
@@ -158,6 +170,32 @@
                 </div>
             </div>
         </section>
+
+        <!-- LOGO MARQUEE -->
+        <div class="w-full overflow-hidden py-5">
+            <div class="flex marquee-track select-none">
+                <div class="flex items-center gap-20 shrink-0 px-4">
+                    <img src="./assets/logo/logo_yabain.png" alt="Yaba-In" class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500">
+                    <img src="./assets/logo/logo_gic.png" alt="GIC" class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500">
+                    <img src="./assets/logo/Logo_iMerit_h.png" alt="iMerit" class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500">
+                    <img src="./assets/logo/logo_mountains_tech.png" alt="Mountains Tech" class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500">
+                    <img src="./assets/logo/logo_AED.png" alt="AED" class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500">
+                    <img src="./assets/logo/dk_payments_logo.png" alt="DK Payment" class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500" style="width: 170px; height: 50px;">
+                    <img src="./assets/logo/logo_gcloud.png" alt="DK Payment" class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500">
+                    <img src="./assets/logo/logo_udm.png" alt="UdM" class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500">
+                </div>
+                <div class="flex items-center gap-20 shrink-0 px-4">
+                    <img src="./assets/logo/logo_yabain.png" alt="Yaba-In" class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500">
+                    <img src="./assets/logo/logo_gic.png" alt="GIC" class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500">
+                    <img src="./assets/logo/logo_mountains_tech.png" alt="Mountains Tech" class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500">
+                    <img src="./assets/logo/Logo_iMerit_h.png" alt="iMerit" class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500">
+                    <img src="./assets/logo/logo_AED.png" alt="AED" class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500">
+                    <img src="./assets/logo/dk_payments_logo.png" alt="DK Payment" class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500">
+                    <img src="./assets/logo/logo_gcloud.png" alt="DK Payment" class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500" style="width: 170px; height: 50px;">
+                    <img src="./assets/logo/logo_udm.png" alt="UdM" class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500">
+                </div>
+            </div>
+        </div>
 
         <!-- EXPERIENCES SECTION (Truncated List) -->
         <section id="experience" class="py-20 border-t border-cyber-border">
@@ -688,16 +726,20 @@
 
         // --- 4. Smooth GSAP Reveals ---
         gsap.registerPlugin(ScrollTrigger);
-        gsap.from(".cyber-panel", {
-            scrollTrigger: {
-                trigger: "#experience",
-                start: "top 80%",
-            },
-            opacity: 0,
-            y: 30,
-            duration: 0.6,
-            stagger: 0.15
-        });
+
+        const revealFromBottom = (selector, triggerId) => {
+            gsap.from(selector, {
+                scrollTrigger: { trigger: triggerId, start: "top 80%" },
+                y: 30,
+                duration: 0.6,
+                stagger: 0.15,
+                clearProps: "transform"
+            });
+        };
+
+        revealFromBottom("#experienceList > .cyber-panel", "#experience");
+        revealFromBottom("#projectGrid > .cyber-panel", "#projects");
+        revealFromBottom("#certList > .cyber-panel", "#certifications");
     </script>
 </body>
 </html>
