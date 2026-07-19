@@ -78,6 +78,15 @@
         .marquee-track:hover {
             animation-play-state: paused;
         }
+        /* Scroll to top button */
+        #scrollTopBtn {
+            transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+        }
+        #scrollTopBtn.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
         /* Scanline Overlay for Cyberpunk Vibe */
         .scanlines {
             position: fixed;
@@ -149,8 +158,11 @@
                         <p id="typingEffect"><span class="text-cyber-danger">> </span><span class="text-white"></span></p>
                     </div>
                     <div class="flex gap-4 pt-4">
-                        <a href="#projects" class="px-6 py-3 bg-cyber-accent text-black font-bold text-sm uppercase tracking-wider hover:bg-white transition-all">
-                            Voir les projets
+                        <a href="#contact" class="px-6 py-3 bg-cyber-accent text-black font-bold text-sm uppercase tracking-wider hover:bg-white transition-all">
+                            Me contacter
+                        </a>
+                        <a href="https://github.com/FlambelSANOU" target="_blank" class="px-6 py-3 border border-cyber-border text-white font-bold text-sm uppercase tracking-wider hover:border-cyber-accent hover:text-cyber-accent transition-all flex items-center gap-2">
+                            <i class="fab fa-github"></i> LinkedIn
                         </a>
                         <a href="https://github.com/FlambelSANOU" target="_blank" class="px-6 py-3 border border-cyber-border text-white font-bold text-sm uppercase tracking-wider hover:border-cyber-accent hover:text-cyber-accent transition-all flex items-center gap-2">
                             <i class="fab fa-github"></i> GitHub
@@ -596,6 +608,11 @@
         </div>
     </footer>
 
+    <!-- SCROLL TO TOP BUTTON -->
+    <button id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed bottom-8 right-8 w-12 h-12 border border-cyber-border bg-cyber-card flex items-center justify-center opacity-0 invisible translate-y-4 z-50 hover:border-cyber-accent hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] transition-all duration-300 group" aria-label="Retour en haut">
+        <i class="fas fa-arrow-up text-cyber-accent text-lg group-hover:-translate-y-0.5 transition-transform"></i>
+    </button>
+
     <!-- FUTURISTIC JS LOGIC -->
     <script>
         // --- 1. Collapsible Lists Logic ("Voir d'avantage") ---
@@ -724,7 +741,14 @@
         }
         animateParticles();
 
-        // --- 4. Smooth GSAP Reveals ---
+        // --- 4. Scroll to Top Button ---
+        const scrollBtn = document.getElementById('scrollTopBtn');
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            scrollBtn.classList.toggle('show', window.scrollY > header.offsetHeight);
+        }, { passive: true });
+
+        // --- 5. Smooth GSAP Reveals ---
         gsap.registerPlugin(ScrollTrigger);
 
         const revealFromBottom = (selector, triggerId) => {
