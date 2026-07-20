@@ -43,8 +43,8 @@
   },
   {
     "id": "udm-lecturer",
-    "logoUrl": "https://placehold.co/120x40/121520/00f0ff?text=UdM",
-    "websiteUrl": "",
+    "logoUrl": "./assets/logo/logo_udm.webp",
+    "websiteUrl": "https://bzssjmpz.elementor.cloud/",
     "periodEn": "Jan 2023 - Present",
     "periodFr": "Jan 2023 - Présent",
     "organisation": "Université des Montagnes",
@@ -57,8 +57,8 @@
   },
   {
     "id": "maspel-coordinator",
-    "logoUrl": "https://placehold.co/120x40/121520/00f0ff?text=MASPEL",
-    "websiteUrl": "",
+    "logoUrl": "./assets/logo/logo_maspel.webp",
+    "websiteUrl": "https://cev.udm.cm",
     "periodEn": "Jul 2023 - Jul 2024",
     "periodFr": "Juil 2023 - Juil 2024",
     "organisation": "MASPEL-UdM",
@@ -71,8 +71,8 @@
   },
   {
     "id": "clemios-consultant",
-    "logoUrl": "https://placehold.co/120x40/121520/00f0ff?text=Clemios",
-    "websiteUrl": "",
+    "logoUrl": "./assets/logo/logo_clemios.webp",
+    "websiteUrl": "https://clemios.com",
     "periodEn": "Jan 2023 - Present",
     "periodFr": "Jan 2023 - Présent",
     "organisation": "Clemios",
@@ -85,8 +85,8 @@
   },
   {
     "id": "tonkain-consultant",
-    "logoUrl": "https://placehold.co/120x40/121520/00f0ff?text=Tonkain",
-    "websiteUrl": "",
+    "logoUrl": "./assets/logo/logo_tonkain.webp",
+    "websiteUrl": "https://tonkain.com",
     "periodEn": "Jan 2022 - Present",
     "periodFr": "Jan 2022 - Présent",
     "organisation": "Tonkain",

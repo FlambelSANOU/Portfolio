@@ -10,11 +10,12 @@
     "badge": { "en": "Co-Founder & CEO Yaba-In | Google Cloud Certified - Gen AI Leader", "fr": "Co-Founder & CEO Yaba-In | Google Cloud Certified - Gen AI Leader" },
     "firstName": { "en": "Flambel Junior", "fr": "Flambel Junior" },
     "lastName": { "en": "SANOU KUÉ", "fr": "SANOU KUÉ" },
-    "subtitle": { "en": "Software engineer | Tech lecturer | Corporate AI integrator", "fr": "Software engineer | Tech lecturer | Corporate AI integrator" },
+    "subtitle": { "en": "Software engineer | Project Manager | Tech lecturer | Corporate AI integrator | AI Trainer", "fr": "Ingénieur Logiciel | Gestion de Projets | Enseignant UdM | Intégrateur d'IA | Formateur Tech" },
     "terminalEmail": { "en": "f.sanou@yaba-in.com", "fr": "f.sanou@yaba-in.com" },
-    "terminalExpertise": { "en": "Expertise: Project Management, UI/UX Design & Fullstack Dev, ERP Integration, Trainer.", "fr": "Expertise : Project Management, UI/UX Design & Fullstack Dev, ERP Integration, Trainer." },
+    "terminalExpertise": { "en": "Expertise: ", "fr": "Expertise : " },
     "contactBtn": { "en": "Contact_me", "fr": "Contactez_moi" },
-    "location": { "en": "Location: Cameroon - Kenya", "fr": "Localisation : Cameroun - Kenya" }
+    "location": { "en": "Location: Cameroon - Kenya", "fr": "Localisation : Cameroun - Kenya" },
+    "terminalExpertiseValue": { "en": "Project Management, UI/UX Design & Fullstack Dev, ERP Integration, Trainer.", "fr": "Project Management, UI/UX Design & Fullstack Dev, ERP Integration, Trainer." }
   },
   "experience": {
     "sectionNum": { "en": "// 02. Journey", "fr": "// 02. Parcours" },

@@ -1,5 +1,6 @@
 // --- I18N SYSTEM ---
-let currentLang = localStorage.getItem('portfolio-lang') || 'en';
+const browserLang = (navigator.language || navigator.userLanguage || '').slice(0, 2);
+let currentLang = localStorage.getItem('portfolio-lang') || (browserLang === 'fr' ? 'fr' : 'en');
 let translations = {};
 let professionalData = [];
 let showcasesData = [];
