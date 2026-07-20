@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,11 +14,28 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-title" content="Flambel SANOU">
-  <link rel="apple-touch-icon" href="./assets/icons/icon_fs.png">
-  <link rel="icon" type="image/x-icon" href="./assets/icons/icon_fs.png">
-  <meta name="theme-color" content="#00f0ffFF">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Flambel SANOU">
+    <link rel="apple-touch-icon" href="./assets/icons/icon_fs.webp">
+    <link rel="icon" type="image/x-icon" href="./assets/icons/icon_fs.webp">
+    <meta name="theme-color" content="#00f0ffFF">
+
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Flambel SANOU">
+    <meta name="twitter:description" content="Software Engineer | Tech Lecturer | Corporate AI Integrator | AI Trainer">
+    <meta name="twitter:image" content="https://f.sanou.yaba-in.com/assets/img/flam.webp">
+    <meta name="twitter:image:alt" content="digiKUNTZ Payments">
+
+    <!-- Facebook -->
+    <meta property="og:url" content="https://eat.yaba-in.com/">
+    <meta property="og:title" content="Flambel SANOU">
+    <meta property="og:description" content="Software engineer | Tech lecturer | Corporate AI integrator | AI Trainer">
+    <meta property="og:image" content="https://f.sanou.yaba-in.com/assets/img/flam.webp">
+    <meta property="og:image:secure_url" content="https://f.sanou.yaba-in.com/assets/img/flam.webp">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="600">
 
     <!-- Tailwind Config for Futuristic Theme -->
     <script>
@@ -45,6 +63,7 @@
 
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body class="font-mono selection:bg-cyber-accent selection:text-black">
 
     <div class="scanlines"></div>
@@ -56,22 +75,33 @@
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="flex items-center gap-3 group">
                 <div class="w-10 h-10 border border-cyber-accent flex items-center justify-center bg-cyber-card">
-                    <span class="text-cyber-accent font-bold text-lg group-hover:scale-110 transition-transform">FS</span>
+                    <span
+                        class="text-cyber-accent font-bold text-lg group-hover:scale-110 transition-transform">FS</span>
                 </div>
                 <span class="text-white font-bold tracking-widest text-sm hidden sm:block">Flambel_SANOU</span>
             </a>
             <nav class="hidden md:flex gap-8 text-sm">
-                <a href="#about" class="text-cyber-muted hover:text-cyber-accent transition-colors" data-i18n="nav.profile">01. PROFILE</a>
-                <a href="#experience" class="text-cyber-muted hover:text-cyber-accent transition-colors" data-i18n="nav.experience">02. EXPERIENCE</a>
-                <a href="#projects" class="text-cyber-muted hover:text-cyber-accent transition-colors" data-i18n="nav.projects">03. PROJECTS</a>
-                <a href="#skills" class="text-cyber-muted hover:text-cyber-accent transition-colors" data-i18n="nav.skills">04. SKILLS</a>
+                <a href="#about" class="text-cyber-muted hover:text-cyber-accent transition-colors"
+                    data-i18n="nav.profile">01. PROFILE</a>
+                <a href="#experience" class="text-cyber-muted hover:text-cyber-accent transition-colors"
+                    data-i18n="nav.experience">02. EXPERIENCE</a>
+                <a href="#projects" class="text-cyber-muted hover:text-cyber-accent transition-colors"
+                    data-i18n="nav.projects">03. PROJECTS</a>
+                <a href="#skills" class="text-cyber-muted hover:text-cyber-accent transition-colors"
+                    data-i18n="nav.skills">04. SKILLS</a>
             </nav>
             <div class="flex items-center gap-3">
                 <div class="flex border border-cyber-border text-xs font-bold">
-                    <button id="langEn" class="lang-btn px-2 py-1.5 uppercase tracking-wider text-cyber-muted hover:text-cyber-accent transition-colors" onclick="setLanguage('en')">EN</button>
-                    <button id="langFr" class="lang-btn px-2 py-1.5 uppercase tracking-wider text-cyber-muted hover:text-cyber-accent transition-colors" onclick="setLanguage('fr')">FR</button>
+                    <button id="langEn"
+                        class="lang-btn px-2 py-1.5 uppercase tracking-wider text-cyber-muted hover:text-cyber-accent transition-colors"
+                        onclick="setLanguage('en')">EN</button>
+                    <button id="langFr"
+                        class="lang-btn px-2 py-1.5 uppercase tracking-wider text-cyber-muted hover:text-cyber-accent transition-colors"
+                        onclick="setLanguage('fr')">FR</button>
                 </div>
-                <a href="#contact" class="px-4 py-2 border border-cyber-accent text-cyber-accent text-xs font-bold uppercase tracking-wider hover:bg-cyber-accent hover:text-black transition-all" data-i18n="nav.contact">
+                <a href="#contact"
+                    class="px-4 py-2 border border-cyber-accent text-cyber-accent text-xs font-bold uppercase tracking-wider hover:bg-cyber-accent hover:text-black transition-all"
+                    data-i18n="nav.contact">
                     Contact_
                 </a>
             </div>
@@ -84,7 +114,9 @@
         <section id="about" class="min-h-[73vh] flex flex-col justify-center">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 <div class="lg:col-span-7 space-y-6" style="margin-top: 15px;">
-                    <div id="heroBadge" class="inline-block px-3 py-1 border border-cyber-accent/30 text-cyber-accent text-xs uppercase tracking-widest" data-i18n="hero.badge">
+                    <div id="heroBadge"
+                        class="inline-block px-3 py-1 border border-cyber-accent/30 text-cyber-accent text-xs uppercase tracking-widest"
+                        data-i18n="hero.badge">
                         Co-Founder & CEO Yaba-In | Google Cloud Certified - Gen AI Leader
                     </div>
                     <h1 class="text-4xl sm:text-6xl font-black text-white leading-tight">
@@ -94,29 +126,39 @@
                     <h2 class="text-xl sm:text-2xl text-cyber-muted font-light" data-i18n="hero.subtitle">
                         Software engineer | Tech lecturer | Corporate AI integrator
                     </h2>
-                    <div class="bg-cyber-card border border-cyber-border p-4 rounded-none font-mono text-xs text-cyber-muted space-y-2">
+                    <div
+                        class="bg-cyber-card border border-cyber-border p-4 rounded-none font-mono text-xs text-cyber-muted space-y-2">
                         <div class="flex items-center justify-between border-b border-cyber-border pb-2 mb-2">
-                            <span class="text-cyber-accent"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i> <span data-i18n="hero.terminalEmail">f.sanou@yaba-in.com</span></span>
+                            <span class="text-cyber-accent"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+                                <span data-i18n="hero.terminalEmail">f.sanou@yaba-in.com</span></span>
                             <div class="flex gap-1.5">
                                 <span class="w-2.5 h-2.5 rounded-full bg-cyber-border inline-block"></span>
                                 <span class="w-2.5 h-2.5 rounded-full bg-cyber-border inline-block"></span>
                                 <span class="w-2.5 h-2.5 rounded-full bg-cyber-accent inline-block"></span>
                             </div>
                         </div>
-                        <p><span class="text-cyber-danger">> </span><strong data-i18n="hero.terminalExpertise">Expertise :</strong> <span data-i18n="hero.terminalExpertiseValue">Project Management, UI/UX Design & Fullstack Dev, ERP Integration, Trainer.</span></p>
-                        <p id="typingEffect"><span class="text-cyber-danger">> </span><span class="text-white"></span></p>
+                        <p><span class="text-cyber-danger">> </span><strong data-i18n="hero.terminalExpertise">Expertise
+                                :</strong> <span data-i18n="hero.terminalExpertiseValue">Project Management, UI/UX
+                                Design & Fullstack Dev, ERP Integration, Trainer.</span></p>
+                        <p id="typingEffect"><span class="text-cyber-danger">> </span><span class="text-white"></span>
+                        </p>
                     </div>
                     <div class="flex gap-4 pt-4">
-                        <a href="#contact" class="px-6 py-3 bg-cyber-accent text-black font-bold text-sm uppercase tracking-wider hover:bg-white transition-all" data-i18n="hero.contactBtn">
+                        <a href="#contact"
+                            class="px-6 py-3 bg-cyber-accent text-black font-bold text-sm uppercase tracking-wider hover:bg-white transition-all"
+                            data-i18n="hero.contactBtn">
                             Contact me
                         </a>
-                        <a href="https://www.linkedin.com/in/flambel-sanou" target="_blank" class="px-2 py-1 border border-cyber-border text-white font-bold text-sm uppercase tracking-wider hover:border-cyber-accent hover:text-cyber-accent transition-all flex items-center gap-2">
+                        <a href="https://www.linkedin.com/in/flambel-sanou" target="_blank"
+                            class="px-2 py-1 border border-cyber-border text-white font-bold text-sm uppercase tracking-wider hover:border-cyber-accent hover:text-cyber-accent transition-all flex items-center gap-2">
                             <i class="fab fa-linkedin" style="font-size: 25px;"></i>
                         </a>
-                        <a href="https://github.com/FlambelSANOU" target="_blank" class="px-2 py-1 border border-cyber-border text-white font-bold text-sm uppercase tracking-wider hover:border-cyber-accent hover:text-cyber-accent transition-all flex items-center gap-2">
+                        <a href="https://github.com/FlambelSANOU" target="_blank"
+                            class="px-2 py-1 border border-cyber-border text-white font-bold text-sm uppercase tracking-wider hover:border-cyber-accent hover:text-cyber-accent transition-all flex items-center gap-2">
                             <i class="fab fa-github" style="font-size: 25px;"></i>
                         </a>
-                        <a href="https://www.facebook.com/flambeljunior.kue/?locale=fr_FR" target="_blank" class="px-2 py-1 border border-cyber-border text-white font-bold text-sm uppercase tracking-wider hover:border-cyber-accent hover:text-cyber-accent transition-all flex items-center gap-2">
+                        <a href="https://www.facebook.com/flambeljunior.kue/?locale=fr_FR" target="_blank"
+                            class="px-2 py-1 border border-cyber-border text-white font-bold text-sm uppercase tracking-wider hover:border-cyber-accent hover:text-cyber-accent transition-all flex items-center gap-2">
                             <i class="fab fa-facebook" style="font-size: 25px;"></i>
                         </a>
                     </div>
@@ -124,9 +166,12 @@
                 <div class="lg:col-span-5 flex justify-center relative">
                     <div class="w-85 h-92 border-2 border-cyber-accent p-2 relative">
                         <div class="absolute -top-3 -left-3 w-6 h-6 border-t-2 border-l-2 border-cyber-accent"></div>
-                        <div class="absolute -bottom-3 -right-3 w-6 h-6 border-b-2 border-r-2 border-cyber-accent"></div>
-                        <img src="./assets/img/flambel.png" alt="Flambel SANOU" class="w-full h-full object-cover filter grayscale sepia-0 brightness-90 contrast-110">
-                        <div class="absolute bottom-4 left-4 bg-black/90 px-3 py-1 border border-cyber-danger text-cyber-danger text-xs" data-i18n="hero.location">
+                        <div class="absolute -bottom-3 -right-3 w-6 h-6 border-b-2 border-r-2 border-cyber-accent">
+                        </div>
+                        <img src="./assets/img/flambel.webp" alt="Flambel SANOU"
+                            class="w-full h-full object-cover filter grayscale sepia-0 brightness-90 contrast-110">
+                        <div class="absolute bottom-4 left-4 bg-black/90 px-3 py-1 border border-cyber-danger text-cyber-danger text-xs"
+                            data-i18n="hero.location">
                             Location: Cameroon - Kenya
                         </div>
                     </div>
@@ -138,24 +183,43 @@
         <div class="w-full overflow-hidden py-5">
             <div class="flex marquee-track select-none">
                 <div class="flex items-center gap-20 shrink-0 px-4">
-                    <img src="./assets/logo/logo_yabain.png" alt="Yaba-In" class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500">
-                    <img src="./assets/logo/logo_gic.png" alt="GIC" class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500">
-                    <img src="./assets/logo/Logo_iMerit_h.png" alt="iMerit" class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500">
-                    <img src="./assets/logo/logo_mountains_tech.png" alt="Mountains Tech" class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500">
-                    <img src="./assets/logo/logo_AED.png" alt="AED" class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500">
-                    <img src="./assets/logo/dk_payments_logo.png" alt="DK Payment" class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500" style="width: 170px; height: 50px;">
-                    <img src="./assets/logo/logo_gcloud.png" alt="Google Cloud" class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500">
-                    <img src="./assets/logo/logo_udm.png" alt="UdM" class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500">
+                    <img src="./assets/logo/logo_yabain.webp" alt="Yaba-In"
+                        class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500">
+                    <img src="./assets/logo/logo_gic.webp" alt="GIC"
+                        class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500">
+                    <img src="./assets/logo/Logo_iMerit_h.webp" alt="iMerit"
+                        class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500">
+                    <img src="./assets/logo/logo_mountains_tech.webp" alt="Mountains Tech"
+                        class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500">
+                    <img src="./assets/logo/logo_AED.webp" alt="AED"
+                        class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500">
+                    <img src="./assets/logo/dk_payments_logo.webp" alt="DK Payment"
+                        class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500"
+                        style="width: 170px; height: 50px;">
+                    <img src="./assets/logo/logo_gcloud.webp" alt="Google Cloud"
+                        class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500">
+                    <img src="./assets/logo/logo_udm.webp" alt="UdM"
+                        class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500">
                 </div>
                 <div class="flex items-center gap-20 shrink-0 px-4">
-                    <img src="./assets/logo/logo_yabain.png" alt="Yaba-In" class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500">
-                    <img src="./assets/logo/logo_gic.png" alt="GIC" class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500">
-                    <img src="./assets/logo/logo_mountains_tech.png" alt="Mountains Tech" class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500">
-                    <img src="./assets/logo/Logo_iMerit_h.png" alt="iMerit" class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500">
-                    <img src="./assets/logo/logo_AED.png" alt="AED" class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500">
-                    <img src="./assets/logo/dk_payments_logo.png" alt="DK Payment" class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500" style="width: 170px; height: 50px;">
-                    <img src="./assets/logo/logo_gcloud.png" alt="Google Cloud" class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500" style="width: 170px; height: 50px;">
-                    <img src="./assets/logo/logo_udm.png" alt="UdM" class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500">
+                    <img src="./assets/logo/logo_yabain.webp" alt="Yaba-In"
+                        class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500">
+                    <img src="./assets/logo/logo_gic.webp" alt="GIC"
+                        class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500">
+                    <img src="./assets/logo/logo_mountains_tech.webp" alt="Mountains Tech"
+                        class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500">
+                    <img src="./assets/logo/Logo_iMerit_h.webp" alt="iMerit"
+                        class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500">
+                    <img src="./assets/logo/logo_AED.webp" alt="AED"
+                        class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500">
+                    <img src="./assets/logo/dk_payments_logo.webp" alt="DK Payment"
+                        class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500"
+                        style="width: 170px; height: 50px;">
+                    <img src="./assets/logo/logo_gcloud.webp" alt="Google Cloud"
+                        class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500"
+                        style="width: 170px; height: 50px;">
+                    <img src="./assets/logo/logo_udm.webp" alt="UdM"
+                        class="h-20 w-auto opacity-55 hover:opacity-80 transition-opacity duration-500">
                 </div>
             </div>
         </div>
@@ -164,13 +228,17 @@
         <section id="experience" class="py-20 border-t border-cyber-border">
             <div class="flex justify-between items-end mb-12">
                 <div>
-                    <span class="text-cyber-accent text-xs font-bold tracking-widest block uppercase" data-i18n="experience.sectionNum">// 02. Journey</span>
-                    <h2 class="text-3xl font-bold text-white" data-i18n="experience.sectionTitle">Professional Experience</h2>
+                    <span class="text-cyber-accent text-xs font-bold tracking-widest block uppercase"
+                        data-i18n="experience.sectionNum">// 02. Journey</span>
+                    <h2 class="text-3xl font-bold text-white" data-i18n="experience.sectionTitle">Professional
+                        Experience</h2>
                 </div>
             </div>
             <div id="experienceList" class="space-y-6"></div>
             <div class="flex justify-center mt-8">
-                <button id="toggleExpBtn" class="px-6 py-3 border border-cyber-accent text-cyber-accent text-xs uppercase tracking-widest font-bold hover:bg-cyber-accent hover:text-black transition-all" data-i18n="experience.seeMore">
+                <button id="toggleExpBtn"
+                    class="px-6 py-3 border border-cyber-accent text-cyber-accent text-xs uppercase tracking-widest font-bold hover:bg-cyber-accent hover:text-black transition-all"
+                    data-i18n="experience.seeMore">
                     See more_
                 </button>
             </div>
@@ -179,12 +247,15 @@
         <!-- PROJECTS SECTION -->
         <section id="projects" class="py-20 border-t border-cyber-border">
             <div class="mb-12">
-                <span class="text-cyber-accent text-xs font-bold tracking-widest block uppercase" data-i18n="projects.sectionNum">// 03. Achievements</span>
+                <span class="text-cyber-accent text-xs font-bold tracking-widest block uppercase"
+                    data-i18n="projects.sectionNum">// 03. Achievements</span>
                 <h2 class="text-3xl font-bold text-white" data-i18n="projects.sectionTitle">Key Projects</h2>
             </div>
             <div id="projectGrid" class="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
             <div class="flex justify-center mt-12">
-                <button id="toggleProjBtn" class="px-6 py-3 border border-cyber-accent text-cyber-accent text-xs uppercase tracking-widest font-bold hover:bg-cyber-accent hover:text-black transition-all" data-i18n="projects.seeMore">
+                <button id="toggleProjBtn"
+                    class="px-6 py-3 border border-cyber-accent text-cyber-accent text-xs uppercase tracking-widest font-bold hover:bg-cyber-accent hover:text-black transition-all"
+                    data-i18n="projects.seeMore">
                     See more_
                 </button>
             </div>
@@ -194,48 +265,79 @@
         <section id="skills" class="py-20 border-t border-cyber-border">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
                 <div class="lg:col-span-4">
-                    <span class="text-cyber-accent text-xs font-bold tracking-widest block uppercase" data-i18n="skills.sectionNum">// 04. Expertise</span>
+                    <span class="text-cyber-accent text-xs font-bold tracking-widest block uppercase"
+                        data-i18n="skills.sectionNum">// 04. Expertise</span>
                     <h2 class="text-3xl font-bold text-white" data-i18n="skills.sectionTitle">Technical Skills</h2>
-                    <p class="text-cyber-muted mt-4 text-sm leading-relaxed" data-i18n="skills.sectionDesc">A set of skills backed by solid experience in interface design, immersive architecture deployment (AR/VR) and agile Full stack development.</p>
+                    <p class="text-cyber-muted mt-4 text-sm leading-relaxed" data-i18n="skills.sectionDesc">A set of
+                        skills backed by solid experience in interface design, immersive architecture deployment (AR/VR)
+                        and agile Full stack development.</p>
                 </div>
                 <div class="lg:col-span-8 space-y-8">
                     <div>
-                        <h3 class="text-xs text-cyber-danger font-bold uppercase tracking-widest mb-4" data-i18n="skills.frameworks">> Frameworks & Languages</h3>
+                        <h3 class="text-xs text-cyber-danger font-bold uppercase tracking-widest mb-4"
+                            data-i18n="skills.frameworks">> Frameworks & Languages</h3>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">Angular</span>
-                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">Ionic</span>
-                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">NodeJS</span>
-                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">ExpressJs</span>
-                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">NestJs</span>
-                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">PHP</span>
-                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">Python</span>
-                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">C# / C++</span>
-                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">TypeScript</span>
-                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">HTML5 / CSS3 / JS</span>
+                            <span
+                                class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">Angular</span>
+                            <span
+                                class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">Ionic</span>
+                            <span
+                                class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">NodeJS</span>
+                            <span
+                                class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">ExpressJs</span>
+                            <span
+                                class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">NestJs</span>
+                            <span
+                                class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">PHP</span>
+                            <span
+                                class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">Python</span>
+                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">C# /
+                                C++</span>
+                            <span
+                                class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">TypeScript</span>
+                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">HTML5 /
+                                CSS3 / JS</span>
                         </div>
                     </div>
                     <div>
-                        <h3 class="text-xs text-cyber-danger font-bold uppercase tracking-widest mb-4" data-i18n="skills.immersive">> Immersive & Design (AR/VR / UI)</h3>
+                        <h3 class="text-xs text-cyber-danger font-bold uppercase tracking-widest mb-4"
+                            data-i18n="skills.immersive">> Immersive & Design (AR/VR / UI)</h3>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">Unity 3D</span>
-                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">SteamVR</span>
-                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">Oculus SDK</span>
-                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">Adobe XD</span>
-                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">Photoshop</span>
-                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">Illustrator</span>
-                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">Windesign / Edraw</span>
+                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">Unity
+                                3D</span>
+                            <span
+                                class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">SteamVR</span>
+                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">Oculus
+                                SDK</span>
+                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">Adobe
+                                XD</span>
+                            <span
+                                class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">Photoshop</span>
+                            <span
+                                class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">Illustrator</span>
+                            <span
+                                class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">Windesign
+                                / Edraw</span>
                         </div>
                     </div>
                     <div>
-                        <h3 class="text-xs text-cyber-danger font-bold uppercase tracking-widest mb-4" data-i18n="skills.devops">> DevOps & Platforms</h3>
+                        <h3 class="text-xs text-cyber-danger font-bold uppercase tracking-widest mb-4"
+                            data-i18n="skills.devops">> DevOps & Platforms</h3>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">AWS</span>
-                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">Firebase</span>
-                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">MongoDB</span>
-                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">Odoo ERP</span>
-                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">Moodle</span>
-                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">Google Workspace Deployment</span>
-                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">Cpanel Admin</span>
+                            <span
+                                class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">AWS</span>
+                            <span
+                                class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">Firebase</span>
+                            <span
+                                class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">MongoDB</span>
+                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">Odoo
+                                ERP</span>
+                            <span
+                                class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">Moodle</span>
+                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">Google
+                                Workspace Deployment</span>
+                            <span class="px-3 py-1 bg-cyber-card border border-cyber-border text-white text-xs">Cpanel
+                                Admin</span>
                         </div>
                     </div>
                 </div>
@@ -245,12 +347,16 @@
         <!-- CERTIFICATIONS SECTION -->
         <section id="certifications" class="py-20 border-t border-cyber-border">
             <div class="mb-12">
-                <span class="text-cyber-accent text-xs font-bold tracking-widest block uppercase" data-i18n="certifications.sectionNum">// 05. Titles</span>
-                <h2 class="text-3xl font-bold text-white" data-i18n="certifications.sectionTitle">Certifications & Distinctions</h2>
+                <span class="text-cyber-accent text-xs font-bold tracking-widest block uppercase"
+                    data-i18n="certifications.sectionNum">// 05. Titles</span>
+                <h2 class="text-3xl font-bold text-white" data-i18n="certifications.sectionTitle">Certifications &
+                    Distinctions</h2>
             </div>
             <div id="certList" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
             <div class="flex justify-center mt-8">
-                <button id="toggleCertBtn" class="px-6 py-3 border border-cyber-accent text-cyber-accent text-xs uppercase tracking-widest font-bold hover:bg-cyber-accent hover:text-black transition-all" data-i18n="certifications.seeMore">
+                <button id="toggleCertBtn"
+                    class="px-6 py-3 border border-cyber-accent text-cyber-accent text-xs uppercase tracking-widest font-bold hover:bg-cyber-accent hover:text-black transition-all"
+                    data-i18n="certifications.seeMore">
                     See more_
                 </button>
             </div>
@@ -261,32 +367,40 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
                 <div class="lg:col-span-5 space-y-6">
                     <div>
-                        <span class="text-cyber-accent text-xs font-bold tracking-widest block uppercase" data-i18n="contact.sectionNum">// 06. Connect</span>
-                        <h2 class="text-3xl font-bold text-white" data-i18n="contact.sectionTitle">Let's start a project</h2>
+                        <span class="text-cyber-accent text-xs font-bold tracking-widest block uppercase"
+                            data-i18n="contact.sectionNum">// 06. Connect</span>
+                        <h2 class="text-3xl font-bold text-white" data-i18n="contact.sectionTitle">Let's start a project
+                        </h2>
                     </div>
                     <p class="text-cyber-muted text-sm leading-relaxed" data-i18n="contact.description">
-                        Need support in software solution architecture, dynamic UI/UX interface design, or pedagogical engineering consulting? Connect to my network node.
+                        Need support in software solution architecture, dynamic UI/UX interface design, or pedagogical
+                        engineering consulting? Connect to my network node.
                     </p>
                     <div class="space-y-3 text-sm">
                         <div class="flex items-center gap-3">
                             <i class="fas fa-envelope text-cyber-accent"></i>
-                            <a href="mailto:f.sanou@yaba-in.com" class="text-white hover:underline">f.sanou@yaba-in.com</a>
+                            <a href="mailto:f.sanou@yaba-in.com"
+                                class="text-white hover:underline">f.sanou@yaba-in.com</a>
                         </div>
                         <div class="flex items-center gap-3">
                             <i class="fas fa-phone text-cyber-accent"></i>
                             <span class="text-white">(+237) 691 224 472</span>
                         </div>
                         <div class="flex gap-4 pt-4">
-                            <a href="https://api.whatsapp.com/send/?phone=23791224472" target="_blank" class="px-2 py-1 border border-cyber-border text-white font-bold text-sm uppercase tracking-wider hover:border-cyber-accent hover:text-cyber-accent transition-all flex items-center gap-2">
+                            <a href="https://api.whatsapp.com/send/?phone=23791224472" target="_blank"
+                                class="px-2 py-1 border border-cyber-border text-white font-bold text-sm uppercase tracking-wider hover:border-cyber-accent hover:text-cyber-accent transition-all flex items-center gap-2">
                                 <i class="fab fa-whatsapp" style="font-size: 25px;"></i>
                             </a>
-                            <a href="https://www.linkedin.com/in/flambel-sanou" target="_blank" class="px-2 py-1 border border-cyber-border text-white font-bold text-sm uppercase tracking-wider hover:border-cyber-accent hover:text-cyber-accent transition-all flex items-center gap-2">
+                            <a href="https://www.linkedin.com/in/flambel-sanou" target="_blank"
+                                class="px-2 py-1 border border-cyber-border text-white font-bold text-sm uppercase tracking-wider hover:border-cyber-accent hover:text-cyber-accent transition-all flex items-center gap-2">
                                 <i class="fab fa-linkedin" style="font-size: 25px;"></i>
                             </a>
-                            <a href="https://github.com/FlambelSANOU" target="_blank" class="px-2 py-1 border border-cyber-border text-white font-bold text-sm uppercase tracking-wider hover:border-cyber-accent hover:text-cyber-accent transition-all flex items-center gap-2">
+                            <a href="https://github.com/FlambelSANOU" target="_blank"
+                                class="px-2 py-1 border border-cyber-border text-white font-bold text-sm uppercase tracking-wider hover:border-cyber-accent hover:text-cyber-accent transition-all flex items-center gap-2">
                                 <i class="fab fa-github" style="font-size: 25px;"></i>
                             </a>
-                            <a href="https://www.facebook.com/flambeljunior.kue/?locale=fr_FR" target="_blank" class="px-2 py-1 border border-cyber-border text-white font-bold text-sm uppercase tracking-wider hover:border-cyber-accent hover:text-cyber-accent transition-all flex items-center gap-2">
+                            <a href="https://www.facebook.com/flambeljunior.kue/?locale=fr_FR" target="_blank"
+                                class="px-2 py-1 border border-cyber-border text-white font-bold text-sm uppercase tracking-wider hover:border-cyber-accent hover:text-cyber-accent transition-all flex items-center gap-2">
                                 <i class="fab fa-facebook" style="font-size: 25px;"></i>
                             </a>
                         </div>
@@ -296,19 +410,27 @@
                     <form action="#" method="POST" class="space-y-6">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div class="space-y-2">
-                                <label class="text-xs text-cyber-accent uppercase tracking-widest font-bold" data-i18n="contact.nameLabel">Name_</label>
-                                <input type="text" required class="w-full bg-cyber-card border border-cyber-border p-3 text-sm focus:outline-none focus:border-cyber-accent text-white">
+                                <label class="text-xs text-cyber-accent uppercase tracking-widest font-bold"
+                                    data-i18n="contact.nameLabel">Name_</label>
+                                <input type="text" required
+                                    class="w-full bg-cyber-card border border-cyber-border p-3 text-sm focus:outline-none focus:border-cyber-accent text-white">
                             </div>
                             <div class="space-y-2">
-                                <label class="text-xs text-cyber-accent uppercase tracking-widest font-bold" data-i18n="contact.emailLabel">Email_</label>
-                                <input type="email" required class="w-full bg-cyber-card border border-cyber-border p-3 text-sm focus:outline-none focus:border-cyber-accent text-white">
+                                <label class="text-xs text-cyber-accent uppercase tracking-widest font-bold"
+                                    data-i18n="contact.emailLabel">Email_</label>
+                                <input type="email" required
+                                    class="w-full bg-cyber-card border border-cyber-border p-3 text-sm focus:outline-none focus:border-cyber-accent text-white">
                             </div>
                         </div>
                         <div class="space-y-2">
-                            <label class="text-xs text-cyber-accent uppercase tracking-widest font-bold" data-i18n="contact.messageLabel">Message_</label>
-                            <textarea rows="5" required class="w-full bg-cyber-card border border-cyber-border p-3 text-sm focus:outline-none focus:border-cyber-accent text-white"></textarea>
+                            <label class="text-xs text-cyber-accent uppercase tracking-widest font-bold"
+                                data-i18n="contact.messageLabel">Message_</label>
+                            <textarea rows="5" required
+                                class="w-full bg-cyber-card border border-cyber-border p-3 text-sm focus:outline-none focus:border-cyber-accent text-white"></textarea>
                         </div>
-                        <button type="submit" class="w-full py-4 bg-cyber-accent text-black font-bold uppercase tracking-widest text-xs hover:bg-white transition-all" data-i18n="contact.submitBtn">
+                        <button type="submit"
+                            class="w-full py-4 bg-cyber-accent text-black font-bold uppercase tracking-widest text-xs hover:bg-white transition-all"
+                            data-i18n="contact.submitBtn">
                             Send_message
                         </button>
                     </form>
@@ -323,17 +445,22 @@
         <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
             <p data-i18n="footer.credit">© 2026 Flambel Junior SANOU KUÉ. Deployed on flambel-sanou.yaba-in.com</p>
             <div class="flex gap-6">
-                <a href="https://github.com/FlambelSANOU" target="_blank" class="hover:text-cyber-accent"><i class="fab fa-github fa-lg"></i></a>
-                <a href="https://shorturl.at/OYAMN" target="_blank" class="hover:text-cyber-accent"><i class="fab fa-linkedin fa-lg"></i></a>
+                <a href="https://github.com/FlambelSANOU" target="_blank" class="hover:text-cyber-accent"><i
+                        class="fab fa-github fa-lg"></i></a>
+                <a href="https://shorturl.at/OYAMN" target="_blank" class="hover:text-cyber-accent"><i
+                        class="fab fa-linkedin fa-lg"></i></a>
             </div>
         </div>
     </footer>
 
     <!-- SCROLL TO TOP BUTTON -->
-    <button id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed bottom-8 right-8 w-12 h-12 border border-cyber-border bg-cyber-card flex items-center justify-center opacity-0 invisible translate-y-4 z-50 hover:border-cyber-accent hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] transition-all duration-300 group" aria-label="Back to top">
+    <button id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})"
+        class="fixed bottom-8 right-8 w-12 h-12 border border-cyber-border bg-cyber-card flex items-center justify-center opacity-0 invisible translate-y-4 z-50 hover:border-cyber-accent hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] transition-all duration-300 group"
+        aria-label="Back to top">
         <i class="fas fa-arrow-up text-cyber-accent text-lg group-hover:-translate-y-0.5 transition-transform"></i>
     </button>
 
     <script src="./assets/js/script.js"></script>
 </body>
+
 </html>

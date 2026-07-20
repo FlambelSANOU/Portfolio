@@ -1,7 +1,7 @@
 [
   {
     "id": "yaba-in-ceo",
-    "logoUrl": "./assets/logo/logo_yabain.png",
+    "logoUrl": "./assets/logo/logo_yabain.webp",
     "websiteUrl": "https://yaba-in.com",
     "periodEn": "Jan 2018 - Present",
     "periodFr": "Jan 2018 - Présent",
@@ -15,7 +15,7 @@
   },
   {
     "id": "gic-consultant",
-    "logoUrl": "./assets/logo/logo_gic.png",
+    "logoUrl": "./assets/logo/logo_gic.webp",
     "websiteUrl": "https://digikuntz.com",
     "periodEn": "Jan 2023 - Present (Part-time)",
     "periodFr": "Jan 2023 - Présent",
@@ -29,7 +29,7 @@
   },
   {
     "id": "imerit-consultant",
-    "logoUrl": "./assets/logo/Logo_iMerit_h.png",
+    "logoUrl": "./assets/logo/Logo_iMerit_h.webp",
     "websiteUrl": "https://imerit.ai",
     "periodEn": "Jan 2025 - Present",
     "periodFr": "Jan 2023 - Présent",
