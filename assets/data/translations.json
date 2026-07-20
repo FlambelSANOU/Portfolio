@@ -1,0 +1,79 @@
+{
+  "nav": {
+    "profile": { "en": "01. PROFILE", "fr": "01. PROFIL" },
+    "experience": { "en": "02. EXPERIENCE", "fr": "02. EXPÉRIENCE" },
+    "projects": { "en": "03. PROJECTS", "fr": "03. PROJETS" },
+    "skills": { "en": "04. SKILLS", "fr": "04. SKILLS" },
+    "contact": { "en": "Contact_me", "fr": "Contactez_moi" }
+  },
+  "hero": {
+    "badge": { "en": "Co-Founder & CEO Yaba-In | Google Cloud Certified - Gen AI Leader", "fr": "Co-Founder & CEO Yaba-In | Google Cloud Certified - Gen AI Leader" },
+    "firstName": { "en": "Flambel Junior", "fr": "Flambel Junior" },
+    "lastName": { "en": "SANOU KUÉ", "fr": "SANOU KUÉ" },
+    "subtitle": { "en": "Software engineer | Tech lecturer | Corporate AI integrator", "fr": "Software engineer | Tech lecturer | Corporate AI integrator" },
+    "terminalEmail": { "en": "f.sanou@yaba-in.com", "fr": "f.sanou@yaba-in.com" },
+    "terminalExpertise": { "en": "Expertise: Project Management, UI/UX Design & Fullstack Dev, ERP Integration, Trainer.", "fr": "Expertise : Project Management, UI/UX Design & Fullstack Dev, ERP Integration, Trainer." },
+    "contactBtn": { "en": "Contact_me", "fr": "Contactez_moi" },
+    "location": { "en": "Location: Cameroon - Kenya", "fr": "Localisation : Cameroun - Kenya" }
+  },
+  "experience": {
+    "sectionNum": { "en": "// 02. Journey", "fr": "// 02. Parcours" },
+    "sectionTitle": { "en": "Professional Experience", "fr": "Expériences Professionnelles" },
+    "seeMore": { "en": "See more_", "fr": "Voir d'avantage_" },
+    "seeLess": { "en": "See less_", "fr": "Voir moins_" }
+  },
+  "projects": {
+    "sectionNum": { "en": "// 03. Achievements", "fr": "// 03. Réalisations" },
+    "sectionTitle": { "en": "Key Projects", "fr": "Quelques Projets Clés" },
+    "visitSite": { "en": "Visit site", "fr": "Visiter le site" },
+    "seeMore": { "en": "See more_", "fr": "Voir d'avantage_" },
+    "seeLess": { "en": "See less_", "fr": "Voir moins_" }
+  },
+  "skills": {
+    "sectionNum": { "en": "// 04. Expertise", "fr": "// 04. Expertises" },
+    "sectionTitle": { "en": "Technical Skills", "fr": "Compétences Techniques" },
+    "sectionDesc": { "en": "A set of skills backed by solid experience in interface design, immersive architecture deployment (AR/VR) and agile Full stack development.", "fr": "Un ensemble de compétences étayé par une solide expérience dans la conception d'interfaces, le déploiement d'architectures immersives (AR/VR) et le développement Full stack agile." },
+    "frameworks": { "en": "> Frameworks & Languages", "fr": "> Frameworks & Languages" },
+    "immersive": { "en": "> Immersive & Design (AR/VR / UI)", "fr": "> Immersive & Design (AR/VR / UI)" },
+    "devops": { "en": "> DevOps & Platforms", "fr": "> DevOps & Platforms" }
+  },
+  "certifications": {
+    "sectionNum": { "en": "// 05. Titles", "fr": "// 05. Titres" },
+    "sectionTitle": { "en": "Certifications & Distinctions", "fr": "Certifications & Distinctions" },
+    "seeMore": { "en": "See more_", "fr": "Voir d'avantage_" },
+    "seeLess": { "en": "See less_", "fr": "Voir moins_" }
+  },
+  "contact": {
+    "sectionNum": { "en": "// 06. Connect", "fr": "// 06. Connexion" },
+    "sectionTitle": { "en": "Let's start a project", "fr": "Lançons un projet" },
+    "description": { "en": "Need support in software solution architecture, dynamic UI/UX interface design, or pedagogical engineering consulting? Connect to my network node.", "fr": "Besoin d'un accompagnement en architecture de solutions logicielles, design d'interfaces UI/UX dynamiques ou de conseils en ingénierie pédagogique ? Connectez-vous à mon nœud réseau." },
+    "nameLabel": { "en": "Name_", "fr": "Nom_" },
+    "emailLabel": { "en": "Email_", "fr": "Email_" },
+    "messageLabel": { "en": "Message_", "fr": "Message_" },
+    "submitBtn": { "en": "Send_message", "fr": "Transmettre_le_message" }
+  },
+  "footer": {
+    "credit": { "en": "© 2026 Flambel Junior SANOU KUÉ. Deployed on flambel-sanou.yaba-in.com", "fr": "© 2026 Flambel Junior SANOU KUÉ. Déployé sur flambel-sanou.yaba-in.com" }
+  },
+  "scrollTop": {
+    "ariaLabel": { "en": "Back to top", "fr": "Retour en haut" }
+  },
+  "typingPhrases": {
+    "en": [
+      "Innovation is only valuable when it sustainably improves the lives of people and organisations.",
+      "I train decision-makers to leverage artificial intelligence to make better decisions.",
+      "I audit your business and identify AI agent automation opportunities.",
+      "I design robust architectures...",
+      "I integrate sovereign artificial intelligence into your business processes to improve performance, efficiency and decision-making.",
+      "Contact me now !"
+    ],
+    "fr": [
+      "L'innovation n'a de valeur que lorsqu'elle améliore durablement la vie des personnes et des organisations.",
+      "Je forme les décideurs à utiliser l'intelligence artificielle pour prendre de meilleures décisions.",
+      "J'audite votre entreprise et identifie les opportunités d'automatisation par agents IA.",
+      "Je conçois des architectures robustes...",
+      "J'intègre l'intelligence artificielle souveraine dans vos processus métier pour améliorer performance, efficacité et prise de décision.",
+      "Contactez-moi maintenant !"
+    ]
+  }
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "duh",
+    "organisation": "Yaba-In",
+    "logoUrl": "",
+    "imageUrl": "https://placehold.co/600x350/121520/00f0ff?text=Do+U+Have",
+    "websiteUrl": "https://douhave.co/",
+    "titleEn": "Do U Have (DUH)",
+    "titleFr": "Do U Have (DUH)",
+    "descriptionEn": "A revolutionary e-commerce platform where buyers post listings describing the item they are looking for, inverting the traditional paradigm.",
+    "descriptionFr": "Une plateforme de commerce électronique révolutionnaire où l'acheteur publie une annonce décrivant l'article recherché, inversant le paradigme traditionnel.",
+    "tech": []
+  },
+  {
+    "id": "centre-pasteur",
+    "organisation": "Centre Pasteur du Cameroun",
+    "logoUrl": "",
+    "imageUrl": "https://placehold.co/600x350/121520/00f0ff?text=Centre+Pasteur",
+    "websiteUrl": "https://centre-pasteur.yaba-in.com",
+    "titleEn": "Centre Pasteur du Cameroun",
+    "titleFr": "Centre Pasteur du Cameroun",
+    "descriptionEn": "Design of a website for a technical body of the Ministry of Health, ensuring optimized accessibility and clear navigation.",
+    "descriptionFr": "Conception du site d'un organisme technique du Ministère de la Santé, assurant accessibilité optimisée et navigation claire.",
+    "tech": []
+  },
+  {
+    "id": "yabi-events",
+    "organisation": "Yaba-In",
+    "logoUrl": "",
+    "imageUrl": "https://placehold.co/600x350/121520/00f0ff?text=Yabi+Events",
+    "websiteUrl": "https://yabi.cm",
+    "titleEn": "Yabi Events (Yallur)",
+    "titleFr": "Yabi Events (Yallur)",
+    "descriptionEn": "A bilingual event platform dedicated to promoting African culture with tracking and management of physical and virtual events.",
+    "descriptionFr": "Solution dédiée à la promotion de la culture africaine avec suivi et gestion d'événements physiques et virtuels.",
+    "tech": []
+  },
+  {
+    "id": "yschool",
+    "organisation": "Yaba-In",
+    "logoUrl": "",
+    "imageUrl": "https://placehold.co/600x350/121520/00f0ff?text=ySchool",
+    "websiteUrl": "https://yschool.yaba-in.com",
+    "titleEn": "ySchool",
+    "titleFr": "ySchool",
+    "descriptionEn": "Comprehensive management (administrative, financial, academic) tailored specifically for the African learning context.",
+    "descriptionFr": "Gestion globale (administrative, financière, académique) taillée spécifiquement pour le contexte d'apprentissage africain.",
+    "tech": []
+  },
+  {
+    "id": "cdb",
+    "organisation": "Clinique Dentaire de Bonapriso",
+    "logoUrl": "",
+    "imageUrl": "https://placehold.co/600x350/121520/00f0ff?text=CDB",
+    "websiteUrl": "",
+    "titleEn": "Clinique Dentaire de Bonapriso",
+    "titleFr": "Clinique Dentaire de Bonapriso",
+    "descriptionEn": "Integration of an interactive module for appointment scheduling and showcasing specialties.",
+    "descriptionFr": "Intégration d'un module interactif pour la prise de rendez-vous et mise en valeur des spécialités.",
+    "tech": []
+  },
+  {
+    "id": "micei",
+    "organisation": "Africa Eye Foundation",
+    "logoUrl": "",
+    "imageUrl": "https://placehold.co/600x350/121520/00f0ff?text=MICEI",
+    "websiteUrl": "",
+    "titleEn": "MICEI",
+    "titleFr": "MICEI",
+    "descriptionEn": "Website of the Geneva eye care NGO for the Magrabi ICO Cameroon Eye Institute.",
+    "descriptionFr": "Portail de l'ONG oculaire de Genève pour le Magrabi ICO Cameroon Eye Institute.",
+    "tech": []
+  }
+]
