@@ -1,0 +1,62 @@
+body {
+    background-color: #08090c;
+    color: #f3f4f6;
+    overflow-x: hidden;
+}
+.cyber-panel {
+    position: relative;
+    border: 1px solid #1f2937;
+    background-color: #0f111a;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.cyber-panel:hover {
+    border-color: #00f0ff;
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.15);
+    transform: translateY(-2px);
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #08090c;
+}
+::-webkit-scrollbar-thumb {
+    background: #00f0ff;
+    border-radius: 0px;
+}
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+.marquee-track {
+    animation: marquee 50s linear infinite;
+    width: fit-content;
+}
+.marquee-track:hover {
+    animation-play-state: paused;
+}
+#scrollTopBtn {
+    transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+}
+#scrollTopBtn.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.scanlines {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+    background-size: 100% 4px;
+    z-index: 999;
+    opacity: 0.3;
+}
+.lang-btn {
+    transition: all 0.3s ease;
+}
+.lang-btn.active {
+    background-color: #00f0ff;
+    color: black;
+    border-color: #00f0ff;
+}
