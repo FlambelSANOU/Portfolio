@@ -5,10 +5,12 @@ let translations = {};
 let professionalData = [];
 let showcasesData = [];
 let distinctionsData = [];
+let volunteerData = [];
 
 let expShowingAll = false;
 let projShowingAll = false;
 let certShowingAll = false;
+let volShowingAll = false;
 let typeInterval = null;
 
 function t(key) {
@@ -43,6 +45,7 @@ function setLanguage(lang) {
     renderExperience();
     renderProjects();
     renderCertifications();
+    renderVolunteer();
     restartTyping();
     gsap.fromTo('main section', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3, stagger: 0.05 });
 }
@@ -50,16 +53,18 @@ function setLanguage(lang) {
 // --- LOAD DATA ---
 async function loadData() {
     try {
-        const [transRes, profRes, showRes, distRes] = await Promise.all([
+        const [transRes, profRes, showRes, distRes, volRes] = await Promise.all([
             fetch('./assets/data/translations.json'),
             fetch('./assets/data/professional.json'),
             fetch('./assets/data/showcases.json'),
-            fetch('./assets/data/distinctions.json')
+            fetch('./assets/data/distinctions.json'),
+            fetch('./assets/data/volunteer.json')
         ]);
         translations = await transRes.json();
         professionalData = await profRes.json();
         showcasesData = await showRes.json();
         distinctionsData = await distRes.json();
+        volunteerData = await volRes.json();
     } catch (e) {
         console.error('Failed to load data:', e);
     }
@@ -118,18 +123,45 @@ function renderProjects() {
 function renderCertifications() {
     const container = document.getElementById('certList');
     const items = certShowingAll ? distinctionsData : distinctionsData.slice(0, 2);
-    container.innerHTML = items.map(cert => `
-        <div class="cyber-panel p-6 space-y-3">
-            <div class="flex justify-between items-start">
-                <span class="text-xs text-cyber-accent">${cert.provider} (${currentLang === 'en' ? cert.dateEn : cert.dateFr})</span>
-                <span class="px-2 py-0.5 border border-cyber-danger text-cyber-danger text-[10px] uppercase">${currentLang === 'en' ? cert.typeEn : cert.typeFr}</span>
+    container.innerHTML = items.map(cert => {
+        const hasImg = cert.imgUrl && cert.imgUrl.trim() !== '';
+        return `
+        <div class="cyber-panel p-6 grid grid-cols-1 md:grid-cols-12 gap-6 items-start cursor-pointer" onclick="window.location.href='cert-detail.html?id=${cert.id}'">
+            ${hasImg ? `
+            <div class="md:col-span-6 flex justify-center">
+                <img src="${cert.imgUrl}" alt="${currentLang === 'en' ? cert.titleEn : cert.titleFr}" class="cert-img w-full h-auto object-contain border border-cyber-border">
+            </div>` : ''}
+            <div class="${hasImg ? 'md:col-span-6' : 'md:col-span-12'} space-y-3">
+                <div class="flex justify-between items-start">
+                    <span class="text-xs text-cyber-accent">${cert.provider} (${currentLang === 'en' ? cert.dateEn : cert.dateFr})</span>
+                    <span class="px-2 py-0.5 border border-cyber-danger text-cyber-danger text-[10px] uppercase">${currentLang === 'en' ? cert.typeEn : cert.typeFr}</span>
+                </div>
+                <h3 class="text-lg font-bold text-white">${currentLang === 'en' ? cert.titleEn : cert.titleFr}</h3>                
+                <p class="text-cyber-muted text-xs leading-relaxed">${currentLang === 'en' ? cert.subTitleEn : cert.subTitleFr}</p>
             </div>
-            <h3 class="text-lg font-bold text-white">${currentLang === 'en' ? cert.titleEn : cert.titleFr}</h3>
-            ${(currentLang === 'en' ? cert.subTitleEn : cert.subTitleFr) ? `<p class="text-cyber-accent text-xs">${currentLang === 'en' ? cert.subTitleEn : cert.subTitleFr}</p>` : ''}
-            <p class="text-cyber-muted text-xs leading-relaxed">${currentLang === 'en' ? cert.descriptionEn : cert.descriptionFr}</p>
+        </div>`;
+    }).join('');
+    updateToggleBtn('toggleCertBtn', 'certifications.seeMore', 'certifications.seeLess', certShowingAll);
+}
+
+// --- RENDER VOLUNTEER ---
+function renderVolunteer() {
+    const container = document.getElementById('volunteerList');
+    const items = volShowingAll ? volunteerData : volunteerData.slice(0, 3);
+    container.innerHTML = items.map(vol => `
+        <div class="cyber-panel p-6 grid grid-cols-1 md:grid-cols-4 gap-6 items-start ${vol.websiteUrl ? 'cursor-pointer' : ''}" ${vol.websiteUrl ? `onclick="window.open('${vol.websiteUrl}', '_blank')"` : ''}>
+            <div class="md:col-span-1 flex flex-col gap-2">
+                <span class="text-cyber-accent font-bold text-sm">${currentLang === 'en' ? vol.periodEn : vol.periodFr}</span>
+                ${vol.logoUrl ? `<img src="${vol.logoUrl}" alt="${vol.organisation}" class="h-25 w-25 object-contain bg-cyber-bg p-1 border border-cyber-border">` : ''}
+            </div>
+            <div class="md:col-span-3 space-y-2">
+                <h3 class="text-xl font-bold text-white">${currentLang === 'en' ? vol.roleEn : vol.roleFr}</h3>
+                <p class="text-cyber-danger text-sm">${vol.organisation}</p>
+                <p class="text-cyber-muted text-sm leading-relaxed">${currentLang === 'en' ? vol.descriptionEn : vol.descriptionFr}</p>
+            </div>
         </div>
     `).join('');
-    updateToggleBtn('toggleCertBtn', 'certifications.seeMore', 'certifications.seeLess', certShowingAll);
+    updateToggleBtn('toggleVolBtn', 'volunteer.seeMore', 'volunteer.seeLess', volShowingAll);
 }
 
 function updateToggleBtn(btnId, showKey, hideKey, isShowingAll) {
@@ -167,6 +199,17 @@ window.toggleCertifications = function() {
         gsap.fromTo('#certList > div:nth-child(n+3)',
             { opacity: 0, scale: 0.95 },
             { opacity: 1, scale: 1, duration: 0.5, stagger: 0.1 }
+        );
+    }
+};
+
+window.toggleVolunteer = function() {
+    volShowingAll = !volShowingAll;
+    renderVolunteer();
+    if (volShowingAll) {
+        gsap.fromTo('#volunteerList > div:not(:nth-child(-n+3))',
+            { opacity: 0, y: 20 },
+            { opacity: 1, y: 0, duration: 0.5, stagger: 0.1 }
         );
     }
 };
@@ -278,10 +321,50 @@ window.addEventListener('scroll', () => {
     scrollBtn.classList.toggle('show', window.scrollY > header.offsetHeight);
 }, { passive: true });
 
+// --- EMAILJS ---
+const emailJsPublicKey = 'J5L8PP5afwexLqxCf';
+const emailJsServiceId = 'service_r2oiekg';
+const emailJsTemplateId = 'newmessage';
+emailjs.init(emailJsPublicKey);
+
+document.getElementById('contactForm').addEventListener('submit', async function (e) {
+    e.preventDefault();
+    const btn = document.getElementById('submitBtn');
+    const status = document.getElementById('formStatus');
+    const formData = { name: this.name.value, email: this.email.value, message: this.message.value };
+
+    if (!formData.name || !formData.email || !formData.message) {
+        status.className = 'text-sm text-cyber-danger';
+        status.textContent = currentLang === 'en' ? 'All fields are required.' : 'Tous les champs sont requis.';
+        status.classList.remove('hidden');
+        return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = currentLang === 'en' ? 'Sending...' : 'Envoi en cours...';
+    status.className = 'text-sm hidden';
+
+    try {
+        await emailjs.send(emailJsServiceId, emailJsTemplateId, formData);
+        status.className = 'text-sm text-cyber-accent';
+        status.textContent = currentLang === 'en' ? 'Message sent successfully!' : 'Message envoyé avec succès !';
+        status.classList.remove('hidden');
+        this.reset();
+    } catch {
+        status.className = 'text-sm text-cyber-danger';
+        status.textContent = currentLang === 'en' ? 'Failed to send. Try again later.' : 'Échec d\'envoi. Réessayez plus tard.';
+        status.classList.remove('hidden');
+    } finally {
+        btn.disabled = false;
+        btn.textContent = t('contact.submitBtn');
+    }
+});
+
 // --- INIT ---
 document.getElementById('toggleExpBtn').addEventListener('click', window.toggleExperience);
 document.getElementById('toggleProjBtn').addEventListener('click', window.toggleProjects);
 document.getElementById('toggleCertBtn').addEventListener('click', window.toggleCertifications);
+document.getElementById('toggleVolBtn').addEventListener('click', window.toggleVolunteer);
 
 async function init() {
     await loadData();
@@ -290,6 +373,7 @@ async function init() {
     renderExperience();
     renderProjects();
     renderCertifications();
+    renderVolunteer();
     setTimeout(type, 1000);
 
     gsap.registerPlugin(ScrollTrigger);
@@ -305,6 +389,7 @@ async function init() {
     reveal("#experienceList > .cyber-panel", "#experience");
     reveal("#projectGrid > .cyber-panel", "#projects");
     reveal("#certList > .cyber-panel", "#certifications");
+    reveal("#volunteerList > .cyber-panel", "#volunteer");
 }
 
 init();

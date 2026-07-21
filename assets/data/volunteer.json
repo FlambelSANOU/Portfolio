@@ -1,0 +1,14 @@
+[
+  {
+    "id": "example-association",
+    "organisation": "Nom de l'association",
+    "roleEn": "Your role (English)",
+    "roleFr": "Votre rôle (Français)",
+    "periodEn": "Jan 2020 - Present",
+    "periodFr": "Jan 2020 - Présent",
+    "descriptionEn": "Description of your volunteer activities and impact.",
+    "descriptionFr": "Description de vos activités bénévoles et de votre impact.",
+    "logoUrl": "",
+    "websiteUrl": ""
+  }
+]

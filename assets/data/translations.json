@@ -20,15 +20,15 @@
   "experience": {
     "sectionNum": { "en": "// 02. Journey", "fr": "// 02. Parcours" },
     "sectionTitle": { "en": "Professional Experience", "fr": "Expériences Professionnelles" },
-    "seeMore": { "en": "See more_", "fr": "Voir d'avantage_" },
-    "seeLess": { "en": "See less_", "fr": "Voir moins_" }
+    "seeMore": { "en": "See_more", "fr": "Voir_plus" },
+    "seeLess": { "en": "See_less", "fr": "Voir_moins" }
   },
   "projects": {
     "sectionNum": { "en": "// 03. Achievements", "fr": "// 03. Réalisations" },
     "sectionTitle": { "en": "Key Projects", "fr": "Quelques Projets Clés" },
     "visitSite": { "en": "Visit site", "fr": "Visiter le site" },
-    "seeMore": { "en": "See more_", "fr": "Voir d'avantage_" },
-    "seeLess": { "en": "See less_", "fr": "Voir moins_" }
+    "seeMore": { "en": "See_more", "fr": "Voir_plus" },
+    "seeLess": { "en": "See_less", "fr": "Voir_moins" }
   },
   "skills": {
     "sectionNum": { "en": "// 04. Expertise", "fr": "// 04. Expertises" },
@@ -41,11 +41,17 @@
   "certifications": {
     "sectionNum": { "en": "// 05. Titles", "fr": "// 05. Titres" },
     "sectionTitle": { "en": "Certifications & Distinctions", "fr": "Certifications & Distinctions" },
-    "seeMore": { "en": "See more_", "fr": "Voir d'avantage_" },
-    "seeLess": { "en": "See less_", "fr": "Voir moins_" }
+    "seeMore": { "en": "See_more", "fr": "Voir_plus" },
+    "seeLess": { "en": "See_less", "fr": "Voir_moins" }
+  },
+  "volunteer": {
+    "sectionNum": { "en": "// 06. Commitment", "fr": "// 06. Engagement" },
+    "sectionTitle": { "en": "Volunteer & Community", "fr": "Bénévolat & Communauté" },
+    "seeMore": { "en": "See_more", "fr": "Voir_plus" },
+    "seeLess": { "en": "See_less", "fr": "Voir_moins" }
   },
   "contact": {
-    "sectionNum": { "en": "// 06. Connect", "fr": "// 06. Connexion" },
+    "sectionNum": { "en": "// 07. Connect", "fr": "// 07. Connexion" },
     "sectionTitle": { "en": "Let's start a project", "fr": "Lançons un projet" },
     "description": { "en": "Need support in software solution architecture, dynamic UI/UX interface design, or pedagogical engineering consulting? Connect to my network node.", "fr": "Besoin d'un accompagnement en architecture de solutions logicielles, design d'interfaces UI/UX dynamiques ou de conseils en ingénierie pédagogique ? Connectez-vous à mon nœud réseau." },
     "nameLabel": { "en": "Name_", "fr": "Nom_" },
@@ -54,7 +60,7 @@
     "submitBtn": { "en": "Send_message", "fr": "Transmettre_le_message" }
   },
   "footer": {
-    "credit": { "en": "© 2026 Flambel Junior SANOU KUÉ. Deployed on flambel-sanou.yaba-in.com", "fr": "© 2026 Flambel Junior SANOU KUÉ. Déployé sur flambel-sanou.yaba-in.com" }
+    "credit": { "en": "© 2026 Flambel SANOU", "fr": "© 2026 Flambel SANOU" }
   },
   "scrollTop": {
     "ariaLabel": { "en": "Back to top", "fr": "Retour en haut" }

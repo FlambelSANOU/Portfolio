@@ -1,7 +1,7 @@
 [
   {
     "id": "yaba-in-ceo",
-    "logoUrl": "./assets/logo/logo_yabain.webp",
+    "logoUrl": "./assets/img/logo/logo_yabain.webp",
     "websiteUrl": "https://yaba-in.com",
     "periodEn": "Jan 2018 - Present",
     "periodFr": "Jan 2018 - Présent",
@@ -15,7 +15,7 @@
   },
   {
     "id": "gic-consultant",
-    "logoUrl": "./assets/logo/logo_gic.webp",
+    "logoUrl": "./assets/img/logo/logo_gic.webp",
     "websiteUrl": "https://digikuntz.com",
     "periodEn": "Jan 2023 - Present (Part-time)",
     "periodFr": "Jan 2023 - Présent",
@@ -29,7 +29,7 @@
   },
   {
     "id": "imerit-consultant",
-    "logoUrl": "./assets/logo/Logo_iMerit_h.webp",
+    "logoUrl": "./assets/img/logo/Logo_iMerit_h.webp",
     "websiteUrl": "https://imerit.ai",
     "periodEn": "Jan 2025 - Present",
     "periodFr": "Jan 2023 - Présent",
@@ -43,7 +43,7 @@
   },
   {
     "id": "udm-lecturer",
-    "logoUrl": "./assets/logo/logo_udm.webp",
+    "logoUrl": "./assets/img/logo/logo_udm.webp",
     "websiteUrl": "https://bzssjmpz.elementor.cloud/",
     "periodEn": "Jan 2023 - Present",
     "periodFr": "Jan 2023 - Présent",
@@ -57,7 +57,7 @@
   },
   {
     "id": "maspel-coordinator",
-    "logoUrl": "./assets/logo/logo_maspel.webp",
+    "logoUrl": "./assets/img/logo/logo_maspel.webp",
     "websiteUrl": "https://cev.udm.cm",
     "periodEn": "Jul 2023 - Jul 2024",
     "periodFr": "Juil 2023 - Juil 2024",
@@ -71,7 +71,7 @@
   },
   {
     "id": "clemios-consultant",
-    "logoUrl": "./assets/logo/logo_clemios.webp",
+    "logoUrl": "./assets/img/logo/logo_clemios.webp",
     "websiteUrl": "https://clemios.com",
     "periodEn": "Jan 2023 - Present",
     "periodFr": "Jan 2023 - Présent",
@@ -85,7 +85,7 @@
   },
   {
     "id": "tonkain-consultant",
-    "logoUrl": "./assets/logo/logo_tonkain.webp",
+    "logoUrl": "./assets/img/logo/logo_tonkain.webp",
     "websiteUrl": "https://tonkain.com",
     "periodEn": "Jan 2022 - Present",
     "periodFr": "Jan 2022 - Présent",

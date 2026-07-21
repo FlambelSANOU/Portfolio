@@ -60,3 +60,11 @@ body {
     color: black;
     border-color: #00f0ff;
 }
+.cert-img {
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+    
+}
+.cyber-panel:hover .cert-img {
+    filter: grayscale(0%);
+}
