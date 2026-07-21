@@ -1,14 +1,38 @@
 [
   {
-    "id": "example-association",
-    "organisation": "Nom de l'association",
-    "roleEn": "Your role (English)",
-    "roleFr": "Votre rôle (Français)",
-    "periodEn": "Jan 2020 - Present",
-    "periodFr": "Jan 2020 - Présent",
-    "descriptionEn": "Description of your volunteer activities and impact.",
-    "descriptionFr": "Description de vos activités bénévoles et de votre impact.",
-    "logoUrl": "",
+    "id": "mt-consortium",
+    "organisation": "Mountains Tech",
+    "roleEn": "President",
+    "roleFr": "Président",
+    "periodEn": "Jan 2025 - Present",
+    "periodFr": "Jan 2025 - Présent",
+    "descriptionEn": "Mountains Tech is a consortium uniting high-tech companies in the West Region of Cameroon. Its mission is to promote innovation and accelerate the digital transformation of the sub-region by fostering collaboration among stakeholders in the technology ecosystem. Through its activities in developing digital solutions, research, training, and business support, Mountains Tech contributes to the emergence of a dynamic and competitive technology ecosystem.",
+    "descriptionFr": "Mountains Tech est un consortium fédérant les entreprises de haute technologie de la région de l’Ouest Cameroun. Sa mission est de promouvoir l’innovation et d’accélérer la transformation numérique de la sous-région en favorisant la collaboration entre les acteurs de l’écosystème technologique. À travers ses activités de développement de solutions numériques, de recherche, de formation et d’accompagnement des entreprises, Mountains Tech contribue à l’émergence d’un écosystème technologique dynamique et compétitif.",
+    "logoUrl": "./assets/img/logo/logo_mountains_tech.webp",
+    "websiteUrl": "https://www.linkedin.com/company/mountains-tech?trk=public_post_feed-actor-name"
+  },
+  {
+    "id": "aed-association",
+    "organisation": "AED",
+    "roleEn": "Membre - Projects Committee",
+    "roleFr": "Membre - Comission des projets",
+    "periodEn": "Jan 2025 - Present",
+    "periodFr": "Jan 2025 - Présent",
+    "descriptionEn": "The Association for Education and Development (AED) is a non-profit organization that founded the Université des Montagnes (UdM), the Cliniques Universitaires des Montagnes (CUM) and the Center des Métiers Professionnels des Montagnes (CMPM). Committed to promoting education, health and sustainable development, it implements numerous projects aimed at strengthening skills, fostering innovation and contributing to socio-economic development.",
+    "descriptionFr": "L’Association pour l’Éducation et le Développement (AED) est une organisation à but non lucratif fondatrice de l’Université des Montagnes (UdM), des Cliniques Universitaires des Montagnes (CUM) et du Centre des Métiers Professionnels des Montagnes (CMPM). Engagée dans la promotion de l’éducation, de la santé et du développement durable, elle met en œuvre de nombreux projets visant à renforcer les compétences, favoriser l’innovation et contribuer au développement socio-économique.",
+    "logoUrl": "./assets/img/logo/logo_AED.webp",
     "websiteUrl": ""
+  },
+  {
+    "id": "racciram",
+    "organisation": "RACCIRAM",
+    "roleEn": "Cooperation Lead",
+    "roleFr": "Responsable de la coopération",
+    "periodEn": "Jan 2023 - Present",
+    "periodFr": "Jan 2023 - Présent",
+    "descriptionEn": "The Central African Network for Integrated Control of Antimicrobial Resistance (CANIC-AMR) aims to reduce the impact of antimicrobial resistance on public health in Central Africa. Our mission is to promote responsible use of antibiotics, build the skills of future leaders, and support the development of effective health policies.",
+    "descriptionFr": "Le Réseau d'Afrique Centrale pour le Contrôle Intégré de la Résistance Antimicrobienne (RACCIRAM) vise à réduire l'impact de la résistance antimicrobienne sur la santé publique en Afrique Centrale. Notre mission consiste à promouvoir une utilisation responsable des antibiotiques, à renforcer les compétences des futurs leaders et à soutenir l'élaboration de politiques de santé efficaces.",
+    "logoUrl": "./assets/img/logo/logo_racciram.png",
+    "websiteUrl": "https://racciram.org"
   }
 ]

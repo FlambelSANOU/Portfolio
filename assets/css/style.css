@@ -68,3 +68,49 @@ body {
 .cyber-panel:hover .cert-img {
     filter: grayscale(0%);
 }
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -100%;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #b0f8ff, transparent);
+    box-shadow: 0 0 8px rgba(0, 240, 255, 0.6);
+    animation: footer-beam 4s ease-in-out infinite;
+}
+@keyframes footer-beam {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+.cursor-blink {
+    display: inline-block;
+    animation: blink 1s step-end infinite;
+}
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.border-beam {
+    position: relative;
+    display: inline-block;
+    overflow: clip;
+}
+.border-beam::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 2px;
+    background: #ffffff;
+    box-shadow: 0 0 12px #00f0ff, 0 0 30px rgba(0, 240, 255, 0.6);
+    animation: border-beam-scan 2.5s ease-in-out infinite;
+}
+@keyframes border-beam-scan {
+    0% { left: -80%; }
+    100% { left: 100%; }
+}

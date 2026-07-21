@@ -73,7 +73,7 @@ async function loadData() {
 // --- RENDER EXPERIENCE ---
 function renderExperience() {
     const container = document.getElementById('experienceList');
-    const items = expShowingAll ? professionalData : professionalData.slice(0, 3);
+    const items = expShowingAll ? professionalData : professionalData.slice(0, 2);
     container.innerHTML = items.map(exp => `
         <div class="cyber-panel p-6 grid grid-cols-1 md:grid-cols-4 gap-6 items-start ${exp.websiteUrl ? 'cursor-pointer' : ''}" ${exp.websiteUrl ? `onclick="window.open('${exp.websiteUrl}', '_blank')"` : ''}>
             <div class="md:col-span-1 flex flex-col gap-2">
@@ -93,7 +93,7 @@ function renderExperience() {
 // --- RENDER PROJECTS ---
 function renderProjects() {
     const container = document.getElementById('projectGrid');
-    const items = projShowingAll ? showcasesData : showcasesData.slice(0, 4);
+    const items = projShowingAll ? showcasesData : showcasesData.slice(0, 2);
     container.innerHTML = items.map(proj => `
         <div class="cyber-panel flex flex-col h-full">
             <div class="relative overflow-hidden group aspect-video bg-black">
@@ -147,12 +147,12 @@ function renderCertifications() {
 // --- RENDER VOLUNTEER ---
 function renderVolunteer() {
     const container = document.getElementById('volunteerList');
-    const items = volShowingAll ? volunteerData : volunteerData.slice(0, 3);
+    const items = volShowingAll ? volunteerData : volunteerData.slice(0, 2);
     container.innerHTML = items.map(vol => `
         <div class="cyber-panel p-6 grid grid-cols-1 md:grid-cols-4 gap-6 items-start ${vol.websiteUrl ? 'cursor-pointer' : ''}" ${vol.websiteUrl ? `onclick="window.open('${vol.websiteUrl}', '_blank')"` : ''}>
             <div class="md:col-span-1 flex flex-col gap-2">
                 <span class="text-cyber-accent font-bold text-sm">${currentLang === 'en' ? vol.periodEn : vol.periodFr}</span>
-                ${vol.logoUrl ? `<img src="${vol.logoUrl}" alt="${vol.organisation}" class="h-25 w-25 object-contain bg-cyber-bg p-1 border border-cyber-border">` : ''}
+                ${vol.logoUrl ? `<img src="${vol.logoUrl}" alt="${vol.organisation}" class="h-25 w-25 object-contain bg-cyber-bg p-1 border border-cyber-border" style="max-height: 140px">` : ''}
             </div>
             <div class="md:col-span-3 space-y-2">
                 <h3 class="text-xl font-bold text-white">${currentLang === 'en' ? vol.roleEn : vol.roleFr}</h3>

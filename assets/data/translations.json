@@ -4,7 +4,7 @@
     "experience": { "en": "02. EXPERIENCE", "fr": "02. EXPÉRIENCE" },
     "projects": { "en": "03. PROJECTS", "fr": "03. PROJETS" },
     "skills": { "en": "04. SKILLS", "fr": "04. SKILLS" },
-    "contact": { "en": "Contact_me", "fr": "Contactez_moi" }
+    "contact": { "en": "Contact_me", "fr": "Me_contacter" }
   },
   "hero": {
     "badge": { "en": "Co-Founder & CEO Yaba-In | Google Cloud Certified - Gen AI Leader", "fr": "Co-Founder & CEO Yaba-In | Google Cloud Certified - Gen AI Leader" },
@@ -13,7 +13,7 @@
     "subtitle": { "en": "Software engineer | Project Manager | Tech lecturer | Corporate AI integrator | AI Trainer", "fr": "Ingénieur Logiciel | Gestion de Projets | Enseignant UdM | Intégrateur d'IA | Formateur Tech" },
     "terminalEmail": { "en": "f.sanou@yaba-in.com", "fr": "f.sanou@yaba-in.com" },
     "terminalExpertise": { "en": "Expertise: ", "fr": "Expertise : " },
-    "contactBtn": { "en": "Contact_me", "fr": "Contactez_moi" },
+    "contactBtn": { "en": "Contact_me", "fr": "Me_contacter" },
     "location": { "en": "Location: Cameroon - Kenya", "fr": "Localisation : Cameroun - Kenya" },
     "terminalExpertiseValue": { "en": "Project Management, UI/UX Design & Fullstack Dev, ERP Integration, Trainer.", "fr": "Project Management, UI/UX Design & Fullstack Dev, ERP Integration, Trainer." }
   },
