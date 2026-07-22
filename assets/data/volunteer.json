@@ -34,5 +34,16 @@
     "descriptionFr": "Le Réseau d'Afrique Centrale pour le Contrôle Intégré de la Résistance Antimicrobienne (RACCIRAM) vise à réduire l'impact de la résistance antimicrobienne sur la santé publique en Afrique Centrale. Notre mission consiste à promouvoir une utilisation responsable des antibiotiques, à renforcer les compétences des futurs leaders et à soutenir l'élaboration de politiques de santé efficaces.",
     "logoUrl": "./assets/img/logo/logo_racciram.png",
     "websiteUrl": "https://racciram.org"
+  },{
+    "id": "gdg-bgte",
+    "organisation": "GDG Bangangté",
+    "roleEn": "Organizer",
+    "roleFr": "Organisateur",
+    "periodEn": "Sep 2018 - Present",
+    "periodFr": "Sep. 2018 - Présent",
+    "descriptionEn": "As an Organizer of the Google Developer Group (GDG) Bangangté, I contribute to building and strengthening the local developer ecosystem by organizing technical meetups, hands-on workshops, hackathons, study jams, and community events focused on Google technologies and modern software engineering. I actively promote knowledge sharing, mentorship, innovation, and collaboration among students, developers, entrepreneurs, and technology enthusiasts while encouraging the adoption of cloud computing, artificial intelligence, web and mobile development, and open-source technologies.",
+    "descriptionFr": "En tant qu'organisateur du Google Developer Group (GDG) Bangangté, je contribue au développement et au renforcement de l'écosystème local des développeurs en organisant des meetups techniques, des ateliers pratiques, des hackathons, des Study Jams et des événements autour des technologies Google et des pratiques modernes du développement logiciel. Je participe activement à la diffusion des connaissances, au mentorat, à l'innovation et à la collaboration entre étudiants, développeurs, entrepreneurs et passionnés de technologie, tout en encourageant l'adoption du cloud computing, de l'intelligence artificielle, du développement web et mobile ainsi que des technologies open source.",
+    "logoUrl": "./assets/img/logo/logo_gdg.png",
+    "websiteUrl": "https://gdg.community.dev/gdg-bangangte/"
   }
 ]

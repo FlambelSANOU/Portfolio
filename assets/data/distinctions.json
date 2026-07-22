@@ -48,6 +48,22 @@
     "descriptionFr": "Cette certification atteste de mes compétences en cybersécurité appliquée aux réseaux sans fil et de ma maîtrise des méthodologies de hacking éthique permettant d'identifier, d'analyser et de corriger les vulnérabilités des infrastructures Wi-Fi. Elle couvre les protocoles de communication sans fil, les techniques de reconnaissance réseau, l'analyse de vulnérabilités, les tests d'intrusion, les mécanismes de chiffrement (WEP, WPA, WPA2 et WPA3), les méthodes d'authentification, les principaux vecteurs d'attaque ainsi que les stratégies de défense. La formation met également l'accent sur l'évaluation des risques, le durcissement de la sécurité des réseaux sans fil, la surveillance des infrastructures, la prévention des incidents et l'application des bonnes pratiques en cybersécurité afin de protéger efficacement les systèmes d'information des organisations."
   },
   {
+    "id": "infra-sec",
+    "provider": "LinkedIn Learning",
+    "imgUrl": "./assets/img/distinctions/sec_infra.png",
+    "fileUrl": "./assets/pdf/sec_infra.pdf",
+    "dateEn": "Oct 2023",
+    "dateFr": "Oct. 2023",
+    "typeEn": "Certificate",
+    "typeFr": "Certificat",
+    "titleEn": "Infrastructure security",
+    "titleFr": "Sécurisez vos infrastructures",
+    "subTitleEn": "Infrastructure hardening, network security, access control, monitoring, and cybersecurity best practices.",
+    "subTitleFr": "Durcissement des infrastructures, sécurité réseau, contrôle d'accès, supervision et bonnes pratiques en cybersécurité.",
+    "descriptionEn": "This certification validates my ability to secure IT infrastructures by applying cybersecurity best practices across networks, servers, operating systems, and cloud environments. It covers infrastructure hardening, identity and access management, network segmentation, firewall configuration, vulnerability management, patch management, security monitoring, backup and disaster recovery strategies, and defense-in-depth principles. The program also emphasizes proactive risk assessment, security policies, incident prevention, and the implementation of resilient infrastructures capable of withstanding modern cyber threats.",
+    "descriptionFr": "Cette certification atteste de ma capacité à sécuriser des infrastructures informatiques en appliquant les meilleures pratiques de cybersécurité aux réseaux, serveurs, systèmes d'exploitation et environnements cloud. Elle couvre le durcissement des systèmes (Hardening), la gestion des identités et des accès (IAM), la segmentation réseau, la configuration des pare-feu, la gestion des vulnérabilités, l'application des correctifs de sécurité, la supervision des infrastructures, les stratégies de sauvegarde et de reprise après sinistre ainsi que les principes de défense en profondeur (Defense in Depth). La formation met également l'accent sur l'évaluation proactive des risques, la mise en œuvre de politiques de sécurité, la prévention des incidents et la conception d'infrastructures résilientes capables de faire face aux cybermenaces modernes."
+  },  
+  {
     "id": "linkedin-learning-chatgpt",
     "provider": "LinkedIn Learning",
     "imgUrl": "./assets/img/distinctions/gpt.png",
