@@ -32,6 +32,38 @@
     "descriptionFr": "Cette certification atteste de ma capacité à exploiter l'intelligence artificielle générative pour concevoir, animer et optimiser des expériences d'apprentissage modernes. Elle couvre l'intégration des outils d'IA dans l'ingénierie pédagogique, la création de parcours de formation personnalisés, les techniques avancées de prompt engineering appliquées à la production de contenus pédagogiques ainsi que l'utilisation responsable de l'IA dans l'enseignement et la formation. La formation aborde également l'automatisation de la production de contenus, la génération d'évaluations, les stratégies d'engagement des apprenants et les bonnes pratiques d'intégration de l'IA générative dans les environnements de formation professionnelle et en entreprise."
   },
   {
+    "id": "gedc-2025",
+    "provider": "Google",
+    "imgUrl": "./assets/img/distinctions/gedc.png",
+    "fileUrl": "./assets/pdf/gedc.pdf",
+    "dateEn": "Nov 2025",
+    "dateFr": "Nov. 2025",
+    "typeEn": "Credential",
+    "typeFr": "Accréditation",
+    "titleEn": "Google for Education Deployment Credential",
+    "titleFr": "Accréditation Google for Education – Déploiement",
+    "subTitleEn": "Educational transformation, digital deployment, change management and institutional adoption.",
+    "subTitleFr": "Transformation numérique des établissements, déploiement de solutions digitales, conduite du changement et accompagnement des institutions.",
+    "descriptionEn": "This credential validates my ability to assess educational institutions, understand their organizational, pedagogical, and technological needs, and successfully plan and deploy Google for Education solutions. It covers institutional needs analysis, digital transformation strategies, stakeholder engagement, change management, deployment planning, user onboarding, security and governance, and the implementation of Google Workspace for Education. The program also emphasizes aligning technology with educational objectives, improving collaboration and productivity, modernizing teaching and administrative processes, and supporting schools throughout their digital transformation journey with sustainable and scalable solutions.",
+    "descriptionFr": "Cette accréditation atteste de ma capacité à analyser le fonctionnement d'une organisation éducative, à comprendre ses enjeux pédagogiques, organisationnels et technologiques, puis à concevoir et mettre en œuvre des solutions numériques adaptées à ses besoins. Elle couvre l'évaluation des besoins institutionnels, l'élaboration d'une stratégie de transformation numérique, la conduite du changement, la planification du déploiement, l'accompagnement des parties prenantes, la gouvernance, la sécurité ainsi que l'implémentation de Google Workspace for Education. La formation met également l'accent sur l'alignement des technologies avec les objectifs pédagogiques et administratifs, l'amélioration de la collaboration entre les acteurs de l'établissement, la modernisation des processus d'enseignement et de gestion, ainsi que l'accompagnement durable des institutions éducatives dans leur transition numérique grâce à des solutions évolutives et pérennes."
+  },
+  {
+    "id": "auf-2023",
+    "provider": "Agence Universitaire de la Francophonie - AUF",
+    "imgUrl": "./assets/img/distinctions/training_trainers.png",
+    "fileUrl": "./assets/pdf/auf-udm_training_trainers.pdf",
+    "dateEn": "Dec 2023",
+    "dateFr": "Déc 2023",
+    "typeEn": "Attestation",
+    "typeFr": "Attestation",
+    "titleEn": "Pedagogical Engineering: Training of Trainers",
+    "titleFr": "Ingénierie Pédagogique : Formation des Formateurs",
+    "subTitleEn": "Mastery of course scripting, distance learning (FOAD), and digital learning assessment.",
+    "subTitleFr": "Maîtrise de la scénarisation de cours, de la FOAD et de l'évaluation des apprentissages numériques.",
+    "descriptionEn": "This training validates my ability to design, develop, and deliver high-quality learning experiences using instructional design principles and modern educational technologies. It covers learning needs analysis, competency-based curriculum design, course scripting and storyboarding, online and blended learning (FOAD), learner assessment strategies, and quality assurance in digital education. The program also emphasizes learner-centered pedagogical approaches, instructional alignment, and the effective integration of digital tools to improve engagement and learning outcomes.",
+    "descriptionFr": "Cette formation atteste de ma capacité à concevoir, développer et animer des dispositifs de formation de qualité en appliquant les principes de l'ingénierie pédagogique et les technologies éducatives modernes. Elle couvre l'analyse des besoins de formation, la conception de parcours basés sur les compétences, la scénarisation pédagogique, le storyboard, la formation ouverte et à distance (FOAD), les stratégies d'évaluation des apprentissages ainsi que les démarches d'assurance qualité en formation numérique. Le programme met également l'accent sur les approches pédagogiques centrées sur l'apprenant, l'alignement pédagogique et l'intégration efficace des outils numériques afin d'améliorer l'engagement des apprenants et les résultats d'apprentissage."
+  },
+  {
     "id": "ethical-hacking-wireless-networks",
     "provider": "LinkedIn Learning",
     "imgUrl": "./assets/img/distinctions/ack_wn.png",
@@ -80,22 +112,6 @@
     "descriptionFr": "Cette certification atteste de ma capacité à contrôler et personnaliser efficacement le comportement de ChatGPT grâce aux instructions personnalisées (Custom Instructions) et aux messages système de l'API OpenAI. Elle couvre les bonnes pratiques du prompt engineering, la conception de prompts système structurés, la définition de rôles, de contraintes et de comportements pour un agent conversationnel, ainsi que la création d'applications d'IA fiables via l'API OpenAI. La formation aborde également les techniques permettant d'améliorer la précision des réponses, de maîtriser le format et le ton des sorties, de limiter les hallucinations et de concevoir des architectures de prompts réutilisables adaptées aux usages professionnels et aux applications d'entreprise."
   },
   {
-    "id": "auf-2023",
-    "provider": "AUF",
-    "imgUrl": "./assets/img/distinctions/training_trainers.png",
-    "fileUrl": "./assets/pdf/auf-udm_training_trainers.pdf",
-    "dateEn": "December 2023",
-    "dateFr": "Décembre 2023",
-    "typeEn": "Attestation",
-    "typeFr": "Attestation",
-    "titleEn": "Pedagogical Engineering: Training of Trainers",
-    "titleFr": "Ingénierie Pédagogique : Formation des Formateurs",
-    "subTitleEn": "Mastery of course scripting, distance learning (FOAD), and digital learning assessment.",
-    "subTitleFr": "Maîtrise de la scénarisation de cours, de la FOAD et de l'évaluation des apprentissages numériques.",
-    "descriptionEn": "This training validates my ability to design, develop, and deliver high-quality learning experiences using instructional design principles and modern educational technologies. It covers learning needs analysis, competency-based curriculum design, course scripting and storyboarding, online and blended learning (FOAD), learner assessment strategies, and quality assurance in digital education. The program also emphasizes learner-centered pedagogical approaches, instructional alignment, and the effective integration of digital tools to improve engagement and learning outcomes.",
-    "descriptionFr": "Cette formation atteste de ma capacité à concevoir, développer et animer des dispositifs de formation de qualité en appliquant les principes de l'ingénierie pédagogique et les technologies éducatives modernes. Elle couvre l'analyse des besoins de formation, la conception de parcours basés sur les compétences, la scénarisation pédagogique, le storyboard, la formation ouverte et à distance (FOAD), les stratégies d'évaluation des apprentissages ainsi que les démarches d'assurance qualité en formation numérique. Le programme met également l'accent sur les approches pédagogiques centrées sur l'apprenant, l'alignement pédagogique et l'intégration efficace des outils numériques afin d'améliorer l'engagement des apprenants et les résultats d'apprentissage."
-  },
-  {
     "id": "coursera-ux-2023",
     "provider": "Google",
     "imgUrl": "./assets/img/distinctions/uiux_google.png",
@@ -110,6 +126,22 @@
     "subTitleFr": "Processus Design Sprint, prototypage d'interactions et tests utilisateur interactifs.",
     "descriptionEn": "This certification validates my ability to design user-centered digital products by applying industry-standard UX methodologies and design thinking principles. It covers user research, persona creation, user journey mapping, information architecture, wireframing, interactive prototyping, usability testing, accessibility, and iterative design. The program also emphasizes the Design Sprint methodology, collaborative product design, and the use of professional tools to create intuitive, accessible, and engaging user experiences that align with both user needs and business objectives.",
     "descriptionFr": "Cette certification atteste de ma capacité à concevoir des produits numériques centrés sur l'utilisateur en appliquant les méthodologies UX reconnues par l'industrie et les principes du Design Thinking. Elle couvre la recherche utilisateur, la création de personas, la cartographie des parcours utilisateurs, l'architecture de l'information, la réalisation de wireframes, le prototypage interactif, les tests d'utilisabilité, l'accessibilité et l'amélioration continue des interfaces. La formation met également l'accent sur la méthodologie Design Sprint, la conception collaborative de produits et l'utilisation d'outils professionnels afin de créer des expériences numériques intuitives, accessibles et engageantes répondant aux besoins des utilisateurs tout en soutenant les objectifs métiers."
+  },
+  {
+    "id": "ux-fondamental",
+    "provider": "OpenClassrooms",
+    "imgUrl": "./assets/img/distinctions/ux_fondamental.png",
+    "fileUrl": "./assets/pdf/ux_fondamental.pdf",
+    "dateEn": "Nov 2023",
+    "dateFr": "Nov 2023",
+    "typeEn": "Certificate",
+    "typeFr": "Certificat",
+    "titleEn": "UX Design Fundamentals",
+    "titleFr": "Les fondamentaux du Design UX",
+    "subTitleEn": "User-centered design, user research, wireframing, prototyping, usability testing, and design thinking.",
+    "subTitleFr": "Conception centrée utilisateur, recherche utilisateur, wireframing, prototypage, tests d'utilisabilité et Design Thinking.",
+    "descriptionEn": "This certification validates my understanding of the core principles of User Experience (UX) Design and my ability to design digital products that effectively meet user needs. It covers user-centered design methodologies, user research, persona creation, user journey mapping, information architecture, wireframing, low- and high-fidelity prototyping, usability testing, accessibility, and iterative design. The program also emphasizes Design Thinking, problem-solving, and collaboration with product and development teams to create intuitive, accessible, and engaging user experiences.",
+    "descriptionFr": "Cette certification atteste de ma maîtrise des principes fondamentaux du Design de l'Expérience Utilisateur (UX) et de ma capacité à concevoir des produits numériques répondant efficacement aux besoins des utilisateurs. Elle couvre les méthodologies de conception centrée utilisateur, la recherche utilisateur, la création de personas, la cartographie des parcours utilisateurs, l'architecture de l'information, le wireframing, le prototypage basse et haute fidélité, les tests d'utilisabilité, l'accessibilité ainsi que l'amélioration continue des interfaces. La formation met également l'accent sur le Design Thinking, la résolution de problèmes et la collaboration avec les équipes produit et développement afin de créer des expériences numériques intuitives, accessibles et engageantes."
   },
   {
     "id": "fullstack-nodejs-express-mongodb",
@@ -174,5 +206,21 @@
     "subTitleFr": "Architecture Angular avancée, communication entre composants, routage, services, RxJS et optimisation des performances.",
     "descriptionEn": "This certification validates my advanced proficiency in building scalable, maintainable, and high-performance web applications with Angular. It covers component-based architecture, dependency injection, routing, reactive forms, RxJS, state management concepts, HTTP communication, modular application design, and performance optimization. The training also emphasizes Angular best practices, reusable component development, debugging techniques, testing strategies, and clean code principles to deliver enterprise-grade front-end applications.",
     "descriptionFr": "Cette certification atteste de ma maîtrise avancée du développement d'applications web performantes, évolutives et maintenables avec Angular. Elle couvre l'architecture basée sur les composants, l'injection de dépendances, le routage, les formulaires réactifs, RxJS, les concepts de gestion d'état, la communication avec les API via HTTP, la modularisation des applications ainsi que les techniques d'optimisation des performances. La formation met également l'accent sur les bonnes pratiques Angular, le développement de composants réutilisables, le débogage, les stratégies de tests et les principes de code propre afin de concevoir des applications front-end de niveau entreprise."
+  },
+  {
+    "id": "bachelor",
+    "provider": "University of Mountains",
+    "imgUrl": "./assets/img/distinctions/bachelor.png",
+    "fileUrl": "./assets/pdf/bachelor.pdf",
+    "dateEn": "Jan 2019",
+    "dateFr": "Jan. 2019",
+    "typeEn": "Degree",
+    "typeFr": "Diplôme",
+    "titleEn": "Professional Bachelor's Degree - IT",
+    "titleFr": "Licence Professionnelle en Informatique",
+    "subTitleEn": "Software Engineering, Information Systems, Databases, Networking, Cybersecurity, and Project Management.",
+    "subTitleFr": "Génie logiciel, systèmes d'information, bases de données, réseaux, cybersécurité et gestion de projets.",
+    "descriptionEn": "This professional bachelor's degree provided a strong foundation in computer science and software engineering, combining theoretical knowledge with extensive practical experience. The program covered software development, object-oriented programming, algorithms and data structures, database design, web and mobile application development, computer networks, operating systems, cybersecurity, information systems, software architecture, and IT project management. It also emphasized problem-solving, collaborative development, and the application of industry best practices to design, build, and maintain reliable digital solutions.",
+    "descriptionFr": "Cette licence professionnelle m'a permis d'acquérir une solide formation en informatique et en génie logiciel, combinant des enseignements théoriques et une forte orientation pratique. Le cursus couvre le développement logiciel, la programmation orientée objet, les algorithmes et structures de données, la conception de bases de données, le développement d'applications web et mobiles, les réseaux informatiques, les systèmes d'exploitation, la cybersécurité, les systèmes d'information, l'architecture logicielle ainsi que la gestion de projets informatiques. La formation met également l'accent sur la résolution de problèmes, le travail collaboratif et l'application des bonnes pratiques de l'industrie pour concevoir, développer et maintenir des solutions numériques fiables et évolutives."
   }
 ]

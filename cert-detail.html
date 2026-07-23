@@ -20,7 +20,7 @@
     <meta name="twitter:image:alt" content="digiKUNTZ Payments">
 
     <!-- Facebook -->
-    <meta property="og:url" content="https://eat.yaba-in.com/">
+    <meta property="og:url" content="https://f.sanou.yaba-in.com/">
     <meta property="og:title" content="Flambel SANOU">
     <meta property="og:description" content="Software engineer | Project Manager | Tech lecturer | Corporate AI integrator | AI Trainer">
     <meta property="og:image" content="https://f.sanou.yaba-in.com/assets/img/flam.webp">
@@ -154,7 +154,7 @@
             const imageContainer = document.getElementById('certImage');
             const hasImg = cert.imgUrl && cert.imgUrl.trim() !== '';
             imageContainer.innerHTML = hasImg
-                ? `<img src="${cert.imgUrl}" alt="${title}" class="w-full h-auto object-contain border border-cyber-border">`
+                ? `<img src="${cert.imgUrl}" alt="${title}" loading="lazy" class="w-full h-auto object-contain border border-cyber-border">`
                 : `<div class="w-full aspect-video border border-cyber-border bg-cyber-card flex items-center justify-center text-cyber-muted text-sm">${title}</div>`;
 
             const infoContainer = document.getElementById('certInfo');
