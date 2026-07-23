@@ -78,7 +78,7 @@ function renderExperience() {
         <div class="cyber-panel p-6 grid grid-cols-1 md:grid-cols-4 gap-6 items-start ${exp.websiteUrl ? 'cursor-pointer' : ''}" ${exp.websiteUrl ? `onclick="window.open('${exp.websiteUrl}', '_blank')"` : ''}>
             <div class="md:col-span-1 flex flex-col gap-2">
                 <span class="text-cyber-accent font-bold text-sm">${currentLang === 'en' ? exp.periodEn : exp.periodFr}</span>
-                ${exp.logoUrl ? `<img src="${exp.logoUrl}" alt="${exp.organisation}" loading="lazy" class="h-25 w-25 object-contain bg-cyber-bg p-1 border border-cyber-border">` : ''}
+                ${exp.logoUrl ? `<img src="${exp.logoUrl}" alt="${exp.organisation}" loading="lazy" class="h-25 w-25 object-contain bg-cyber-bg p-1 border border-cyber-border" style="max-height: 100px">` : ''}
             </div>
             <div class="md:col-span-3 space-y-2">
                 <h3 class="text-xl font-bold text-white">${currentLang === 'en' ? exp.roleEn : exp.roleFr}</h3>
