@@ -81,7 +81,7 @@ footer::before {
     height: 3px;
     background: linear-gradient(90deg, transparent, #b0f8ff, transparent);
     box-shadow: 0 0 16px rgba(0, 240, 255, 0.9), 0 0 50px rgba(0, 240, 255, 0.4);
-    animation: footer-beam 3s ease-in-out infinite;
+    animation: footer-beam 3s ease-in-out infinite alternate;
 }
 @keyframes footer-beam {
     0% { left: -200px; }
