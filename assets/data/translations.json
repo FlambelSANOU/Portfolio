@@ -15,6 +15,7 @@
     "terminalExpertise": { "en": "Expertise: ", "fr": "Expertise : " },
     "contactBtn": { "en": "Contact_me", "fr": "Me_contacter" },
     "location": { "en": "Location: Cameroon - Kenya", "fr": "Localisation : Cameroun - Kenya" },
+    "myEngagement": { "en": "My involvement :", "fr": "Mon engagement :" },
     "terminalExpertiseValue": { "en": "Project Management, UI/UX Design & Fullstack Dev, ERP Integration, Trainer.", "fr": "Project Management, UI/UX Design & Fullstack Dev, ERP Integration, Trainer." }
   },
   "experience": {
