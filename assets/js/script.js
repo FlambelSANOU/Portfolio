@@ -75,7 +75,7 @@ function renderExperience() {
     const container = document.getElementById('experienceList');
     const items = expShowingAll ? professionalData : professionalData.slice(0, 2);
     container.innerHTML = items.map(exp => `
-        <div class="cyber-panel p-6 grid grid-cols-1 md:grid-cols-4 gap-6 items-start ${exp.websiteUrl ? 'cursor-pointer' : ''}" ${exp.websiteUrl ? `onclick="window.open('${exp.websiteUrl}', '_blank')"` : ''}>
+        <div class="cyber-panel p-6 grid grid-cols-1 md:grid-cols-4 gap-6 items-start">
             <div class="md:col-span-1 flex flex-col gap-2">
                 <span class="text-cyber-accent font-bold text-sm">${currentLang === 'en' ? exp.periodEn : exp.periodFr}</span>
                 ${exp.logoUrl ? `<img src="${exp.logoUrl}" alt="${exp.organisation}" loading="lazy" class="h-25 w-25 object-contain bg-cyber-bg p-1 border border-cyber-border" style="max-height: 100px">` : ''}
@@ -84,6 +84,7 @@ function renderExperience() {
                 <h3 class="text-xl font-bold text-white">${currentLang === 'en' ? exp.roleEn : exp.roleFr}</h3>
                 <p class="text-cyber-danger text-sm">${exp.organisation} <span class="text-cyber-muted">| ${currentLang === 'en' ? exp.locationEn : exp.locationFr}</span></p>
                 <p class="text-cyber-muted text-sm leading-relaxed">${currentLang === 'en' ? exp.descriptionEn : exp.descriptionFr}</p>
+                ${exp.websiteUrl ? `<a href="${exp.websiteUrl}" target="_blank" class="inline-block mt-3 px-4 py-2 border border-cyber-accent text-cyber-accent text-xs font-bold uppercase tracking-wider hover:bg-cyber-accent hover:text-black transition-all">${t('experience.visitSite')}</a>` : ''}
             </div>
         </div>
     `).join('');
@@ -96,12 +97,8 @@ function renderProjects() {
     const items = projShowingAll ? showcasesData : showcasesData.slice(0, 2);
     container.innerHTML = items.map(proj => `
         <div class="cyber-panel flex flex-col h-full">
-            <div class="relative overflow-hidden group aspect-video bg-black">
-                <img src="${proj.imageUrl}" alt="${currentLang === 'en' ? proj.titleEn : proj.titleFr}" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                ${proj.websiteUrl ? `
-                <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <a href="${proj.websiteUrl}" target="_blank" class="px-4 py-2 border border-cyber-accent text-cyber-accent text-xs font-bold uppercase tracking-wider bg-black hover:bg-cyber-accent hover:text-black transition-all">${t('projects.visitSite')}</a>
-                </div>` : ''}
+            <div class="relative overflow-hidden aspect-video bg-black">
+                <img src="${proj.imageUrl}" alt="${currentLang === 'en' ? proj.titleEn : proj.titleFr}" loading="lazy" class="w-full h-full object-cover">
             </div>
             <div class="p-6 flex flex-col justify-between flex-grow">
                 <div class="space-y-2">
@@ -113,6 +110,7 @@ function renderProjects() {
                         ${proj.tech.map(t => `<img src="${t}" alt="tech" loading="lazy" class="h-5 w-5 object-contain">`).join('')}
                     </div>` : ''}
                 </div>
+                ${proj.websiteUrl ? `<a href="${proj.websiteUrl}" target="_blank" class="self-start mt-3 px-4 py-2 border border-cyber-accent text-cyber-accent text-xs font-bold uppercase tracking-wider hover:bg-cyber-accent hover:text-black transition-all">${t('projects.visitSite')}</a>` : ''}
             </div>
         </div>
     `).join('');
@@ -126,7 +124,7 @@ function renderCertifications() {
     container.innerHTML = items.map(cert => {
         const hasImg = cert.imgUrl && cert.imgUrl.trim() !== '';
         return `
-        <div class="cyber-panel p-6 grid grid-cols-1 md:grid-cols-12 gap-6 items-start cursor-pointer" onclick="window.location.href='cert-detail.html?id=${cert.id}'">
+        <div class="cyber-panel p-6 grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
             ${hasImg ? `
             <div class="md:col-span-6 flex justify-center">
                 <img src="${cert.imgUrl}" alt="${currentLang === 'en' ? cert.titleEn : cert.titleFr}" loading="lazy" class="cert-img w-full h-auto object-contain border border-cyber-border">
@@ -138,6 +136,7 @@ function renderCertifications() {
                 </div>
                 <h3 class="text-lg font-bold text-white">${currentLang === 'en' ? cert.titleEn : cert.titleFr}</h3>                
                 <p class="text-cyber-muted text-xs leading-relaxed">${currentLang === 'en' ? cert.subTitleEn : cert.subTitleFr}</p>
+                <a href="cert-detail.html?id=${cert.id}" class="inline-block mt-3 px-4 py-2 border border-cyber-accent text-cyber-accent text-xs font-bold uppercase tracking-wider hover:bg-cyber-accent hover:text-black transition-all">${t('certifications.open')}</a>
             </div>
         </div>`;
     }).join('');
@@ -149,7 +148,7 @@ function renderVolunteer() {
     const container = document.getElementById('volunteerList');
     const items = volShowingAll ? volunteerData : volunteerData.slice(0, 2);
     container.innerHTML = items.map(vol => `
-        <div class="cyber-panel p-6 grid grid-cols-1 md:grid-cols-4 gap-6 items-start ${vol.websiteUrl ? 'cursor-pointer' : ''}" ${vol.websiteUrl ? `onclick="window.open('${vol.websiteUrl}', '_blank')"` : ''}>
+        <div class="cyber-panel p-6 grid grid-cols-1 md:grid-cols-4 gap-6 items-start">
             <div class="md:col-span-1 flex flex-col gap-2">
                 <span class="text-cyber-accent font-bold text-sm">${currentLang === 'en' ? vol.periodEn : vol.periodFr}</span>
                 ${vol.logoUrl ? `<img src="${vol.logoUrl}" alt="${vol.organisation}" loading="lazy" class="h-25 w-25 object-contain bg-cyber-bg p-1 border border-cyber-border" style="max-height: 140px">` : ''}
@@ -158,6 +157,7 @@ function renderVolunteer() {
                 <h3 class="text-xl font-bold text-white">${currentLang === 'en' ? vol.roleEn : vol.roleFr}</h3>
                 <p class="text-cyber-danger text-sm">${vol.organisation}</p>
                 <p class="text-cyber-muted text-sm leading-relaxed">${currentLang === 'en' ? vol.descriptionEn : vol.descriptionFr}</p>
+                ${vol.websiteUrl ? `<a href="${vol.websiteUrl}" target="_blank" class="inline-block mt-3 px-4 py-2 border border-cyber-accent text-cyber-accent text-xs font-bold uppercase tracking-wider hover:bg-cyber-accent hover:text-black transition-all">${t('volunteer.visitSite')}</a>` : ''}
             </div>
         </div>
     `).join('');
@@ -335,24 +335,24 @@ document.getElementById('contactForm').addEventListener('submit', async function
 
     if (!formData.name || !formData.email || !formData.message) {
         status.className = 'text-sm text-cyber-danger';
-        status.textContent = currentLang === 'en' ? 'All fields are required.' : 'Tous les champs sont requis.';
+        status.textContent = t('contact.validationError');
         status.classList.remove('hidden');
         return;
     }
 
     btn.disabled = true;
-    btn.textContent = currentLang === 'en' ? 'Sending...' : 'Envoi en cours...';
+    btn.textContent = t('contact.sending');
     status.className = 'text-sm hidden';
 
     try {
         await emailjs.send(emailJsServiceId, emailJsTemplateId, formData);
         status.className = 'text-sm text-cyber-accent';
-        status.textContent = currentLang === 'en' ? 'Message sent successfully!' : 'Message envoyé avec succès !';
+        status.textContent = t('contact.success');
         status.classList.remove('hidden');
         this.reset();
     } catch {
         status.className = 'text-sm text-cyber-danger';
-        status.textContent = currentLang === 'en' ? 'Failed to send. Try again later.' : 'Échec d\'envoi. Réessayez plus tard.';
+        status.textContent = t('contact.error');
         status.classList.remove('hidden');
     } finally {
         btn.disabled = false;

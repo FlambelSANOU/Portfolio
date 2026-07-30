@@ -1,4 +1,7 @@
 {
+  "meta": {
+    "title": { "en": "Flambel SANOU | Software Engineer & AI Integrator", "fr": "Flambel SANOU | Ingénieur Logiciel & Intégrateur IA" }
+  },
   "nav": {
     "profile": { "en": "01. PROFILE", "fr": "01. PROFIL" },
     "experience": { "en": "02. EXPERIENCE", "fr": "02. EXPÉRIENCE" },
@@ -16,18 +19,21 @@
     "contactBtn": { "en": "Contact_me", "fr": "Me_contacter" },
     "location": { "en": "Location: Cameroon - Kenya", "fr": "Localisation : Cameroun - Kenya" },
     "myEngagement": { "en": "My involvement :", "fr": "Mon engagement :" },
-    "terminalExpertiseValue": { "en": "Project Management, UI/UX Design & Fullstack Dev, ERP Integration, Trainer.", "fr": "Project Management, UI/UX Design & Fullstack Dev, ERP Integration, Trainer." }
+    "terminalExpertiseValue": { "en": "Project Management, UI/UX Design & Fullstack Dev, ERP Integration, Trainer.", "fr": "Project Management, UI/UX Design & Fullstack Dev, ERP Integration, Trainer." },
+    "aiGoogle": { "en": "AI Google", "fr": "IA Google" },
+    "aiMicrosoft": { "en": "AI Microsoft", "fr": "IA Microsoft" }
   },
   "experience": {
     "sectionNum": { "en": "// 02. Journey", "fr": "// 02. Parcours" },
     "sectionTitle": { "en": "Professional Experience", "fr": "Expériences Professionnelles" },
+    "visitSite": { "en": "Visit site", "fr": "Voir le site" },
     "seeMore": { "en": "See_more", "fr": "Voir_plus" },
     "seeLess": { "en": "See_less", "fr": "Voir_moins" }
   },
   "projects": {
     "sectionNum": { "en": "// 03. Achievements", "fr": "// 03. Réalisations" },
     "sectionTitle": { "en": "Key Projects", "fr": "Quelques Projets Clés" },
-    "visitSite": { "en": "Visit site", "fr": "Visiter le site" },
+    "visitSite": { "en": "Visit site", "fr": "Voir le site" },
     "seeMore": { "en": "See_more", "fr": "Voir_plus" },
     "seeLess": { "en": "See_less", "fr": "Voir_moins" }
   },
@@ -42,10 +48,12 @@
   "certifications": {
     "sectionNum": { "en": "// 05. Titles", "fr": "// 05. Titres" },
     "sectionTitle": { "en": "Certifications & Distinctions", "fr": "Certifications & Distinctions" },
+    "open": { "en": "Open", "fr": "Ouvrir" },
     "seeMore": { "en": "See_more", "fr": "Voir_plus" },
     "seeLess": { "en": "See_less", "fr": "Voir_moins" }
   },
   "volunteer": {
+    "visitSite": { "en": "Visit site", "fr": "Voir le site" },
     "sectionNum": { "en": "// 06. Commitment", "fr": "// 06. Engagement" },
     "sectionTitle": { "en": "Volunteer & Community", "fr": "Bénévolat & Communauté" },
     "seeMore": { "en": "See_more", "fr": "Voir_plus" },
@@ -58,7 +66,13 @@
     "nameLabel": { "en": "Name_", "fr": "Nom_" },
     "emailLabel": { "en": "Email_", "fr": "Email_" },
     "messageLabel": { "en": "Message_", "fr": "Message_" },
-    "submitBtn": { "en": "Send_message", "fr": "Transmettre_le_message" }
+    "submitBtn": { "en": "Send_message", "fr": "Transmettre_le_message" },
+    "email": { "en": "f.sanou@yaba-in.com", "fr": "f.sanou@yaba-in.com" },
+    "phone": { "en": "(+237) 691 224 472", "fr": "(+237) 691 224 472" },
+    "validationError": { "en": "All fields are required.", "fr": "Tous les champs sont requis." },
+    "sending": { "en": "Sending...", "fr": "Envoi en cours..." },
+    "success": { "en": "Message sent successfully!", "fr": "Message envoyé avec succès !" },
+    "error": { "en": "Failed to send. Try again later.", "fr": "Échec d'envoi. Réessayez plus tard." }
   },
   "footer": {
     "credit": { "en": "© 2026 Flambel SANOU", "fr": "© 2026 Flambel SANOU" }
