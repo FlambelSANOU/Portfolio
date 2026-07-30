@@ -26,14 +26,14 @@
   "experience": {
     "sectionNum": { "en": "// 02. Journey", "fr": "// 02. Parcours" },
     "sectionTitle": { "en": "Professional Experience", "fr": "Expériences Professionnelles" },
-    "visitSite": { "en": "Visit site", "fr": "Voir le site" },
+    "visitSite": { "en": "Visit website", "fr": "Voir le site" },
     "seeMore": { "en": "See_more", "fr": "Voir_plus" },
     "seeLess": { "en": "See_less", "fr": "Voir_moins" }
   },
   "projects": {
     "sectionNum": { "en": "// 03. Achievements", "fr": "// 03. Réalisations" },
     "sectionTitle": { "en": "Key Projects", "fr": "Quelques Projets Clés" },
-    "visitSite": { "en": "Visit site", "fr": "Voir le site" },
+    "visitSite": { "en": "Visit website", "fr": "Voir le site" },
     "seeMore": { "en": "See_more", "fr": "Voir_plus" },
     "seeLess": { "en": "See_less", "fr": "Voir_moins" }
   },
@@ -53,7 +53,7 @@
     "seeLess": { "en": "See_less", "fr": "Voir_moins" }
   },
   "volunteer": {
-    "visitSite": { "en": "Visit site", "fr": "Voir le site" },
+    "visitSite": { "en": "Visit website", "fr": "Voir le site" },
     "sectionNum": { "en": "// 06. Commitment", "fr": "// 06. Engagement" },
     "sectionTitle": { "en": "Volunteer & Community", "fr": "Bénévolat & Communauté" },
     "seeMore": { "en": "See_more", "fr": "Voir_plus" },
